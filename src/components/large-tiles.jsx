@@ -26,6 +26,7 @@ const styles = theme => ({
         color: 'deepskyblue',
         fontSize: 36,
         margin: 50,
+        textAlign: 'center',
     },
 });
 
