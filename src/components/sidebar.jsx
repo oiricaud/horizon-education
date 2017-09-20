@@ -11,13 +11,14 @@ import BusinessIcon from 'material-ui-icons/Business';
 import PhoneIcon from 'material-ui-icons/Phone';
 import DirectionsIcon from 'material-ui-icons/Directions';
 import DateRangeIcon from 'material-ui-icons/DateRange';
+
+
 import StarIcon from 'material-ui-icons/Star';
-import SendIcon from 'material-ui-icons/Send';
 import HomeIcon from 'material-ui-icons/Home';
 import ComputerIcon from 'material-ui-icons/Computer';
 import Toolbar from 'material-ui/Toolbar';
 import MenuIcon from 'material-ui-icons/Menu';
-import MenuItem from 'material-ui/Menu/MenuItem';
+import SchoolIcon from 'material-ui-icons/School';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 
@@ -46,6 +47,7 @@ const styles = theme => ({
         flex: 1,
         color: '#FAFAFA'
     },
+
 });
 
 class SideBarItem extends Component {
@@ -69,6 +71,7 @@ class SideBarItem extends Component {
 
     handleLeftOpen = () => this.toggleDrawer('left', true);
     handleLeftClose = () => this.toggleDrawer('left', false);
+
 
     render(){
         const classes = this.props.classes;
@@ -204,6 +207,7 @@ class SideBarItem extends Component {
                         </Drawer>
                     <Typography type="title" className={classes.flex}>
                         Horizon Education
+
                     </Typography>
                 </Toolbar>
 

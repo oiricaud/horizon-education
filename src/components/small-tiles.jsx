@@ -15,44 +15,27 @@ const styles = theme => ({
     },
     gridList: {
         paddingTop: 50,
-        width: 1500,
+        maxWidth: 1500,
         cellHeight: 'auto',
     },
     subheader: {
         width: '100%',
     },
+    quote:{
+        color: 'deepskyblue',
+        fontSize: 24,
+        marginTop: 50,
+        marginLeft:20,
+        textAlign: 'center',
+    }
 });
 
 const tileData = [
     {
-        img: process.env.PUBLIC_URL + './haircuts/haircut1.jpg',
+        img: process.env.PUBLIC_URL + './haircuts/sm-student1.jpg',
         title: 'Image',
         author: 'author',
         cols: 1,
-    },
-    {
-        img: process.env.PUBLIC_URL + './haircuts/haircut3.jpg',
-        title: 'Image',
-        author: 'author',
-        cols: 1,
-    },
-    {
-        img: process.env.PUBLIC_URL + './haircuts/haircut4.jpg',
-        title: 'Image',
-        author: 'author',
-        cols: 2,
-    },
-    {
-        img: process.env.PUBLIC_URL + './haircuts/haircut5.jpg',
-        title: 'Image',
-        author: 'author',
-        cols: 1,
-    },
-    {
-        img: process.env.PUBLIC_URL + './haircuts/haircut6.jpg',
-        title: 'Image',
-        author: 'author',
-        cols: 2,
     },
 ];
 function ImageGridList(props) {
@@ -60,12 +43,18 @@ function ImageGridList(props) {
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={300} className={classes.gridList} cols={1}>
-                {tileData.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1 || 2}>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
-                ))}
+            <GridList cellHeight={500} className={classes.gridList} cols={1}>
+            {tileData.map(tile => (
+                <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                    <img src={tile.img} alt={tile.title} />
+                </GridListTile>
+
+            ))}
+            {tileData.map(tile => (
+                <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                    <h1 className={classes.quote} > "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better." </h1>
+                </GridListTile>
+            ))}
             </GridList>
         </div>
     );
