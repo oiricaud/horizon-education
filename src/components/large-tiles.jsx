@@ -9,7 +9,7 @@ const styles = theme => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'left',
+        justifyContent: 'center',
         overflow: 'hidden',
         background: theme.palette.background.paper,
     },
@@ -25,42 +25,58 @@ const styles = theme => ({
     quote:{
         color: 'deepskyblue',
         fontSize: 36,
-        marginTop: 50,
-        marginLeft:20,
-    }
+        margin: 50,
+    },
 });
 
-const tileData = [
+const tileDataFirstRow = [
     {
-        img: process.env.PUBLIC_URL + './haircuts/student1.jpg',
+        img: process.env.PUBLIC_URL + './students/student1.jpg',
         title: 'Image',
         author: 'author',
         cols: 1,
     },
-
 ];
+
+const tileDataSecondRow = [
+    {
+        img: process.env.PUBLIC_URL + './students/lg-student2.jpg',
+        title: 'Image',
+        author: 'author',
+        cols: 1,
+    },
+];
+
 function ImageGridList(props) {
     const classes = props.classes;
 
     return (
         <div className={classes.root}>
             <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                {tileData.map(tile => (
+                {tileDataFirstRow.map(tile => (
                     <GridListTile key={tile.img} cols={tile.cols || 1 }>
                         <img src={tile.img} alt={tile.title} />
                     </GridListTile>
 
                 ))}
-                {tileData.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
-                        <h1 className={classes.quote} > "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better." </h1>
+                {tileDataFirstRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
+                        <h1 className={classes.quote} >"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</h1>
                     </GridListTile>
-
                 ))}
             </GridList>
-            <div>
-
-            </div>
+            <GridList cellHeight={500} className={classes.gridList} cols={2}>
+                {tileDataSecondRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
+                        <h1 className={classes.quote} >"Information is not knowledge."</h1>
+                    </GridListTile>
+                ))}
+                {tileDataSecondRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+            </GridList>
         </div>
     );
 }

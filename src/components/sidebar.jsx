@@ -9,6 +9,7 @@ import Divider from 'material-ui/Divider';
 
 import BusinessIcon from 'material-ui-icons/Business';
 import PhoneIcon from 'material-ui-icons/Phone';
+import AcademicsIcon from 'material-ui-icons/ModeEdit';
 import DirectionsIcon from 'material-ui-icons/Directions';
 import DateRangeIcon from 'material-ui-icons/DateRange';
 
@@ -21,6 +22,7 @@ import MenuIcon from 'material-ui-icons/Menu';
 import SchoolIcon from 'material-ui-icons/School';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
+import Icon from 'material-ui/Icon';
 
 const styles = theme => ({
     root: {
@@ -32,7 +34,7 @@ const styles = theme => ({
         maxWidth: 400,
     },
     media: {
-        height: 300,
+        height: 200,
         marginBottom:20,
     },
     list: {
@@ -47,7 +49,9 @@ const styles = theme => ({
         flex: 1,
         color: '#FAFAFA'
     },
-
+    logoImage:{
+        img: process.env.PUBLIC_URL + './icons/horizoneducation.jpg',
+    }
 });
 
 class SideBarItem extends Component {
@@ -99,10 +103,22 @@ class SideBarItem extends Component {
                 <NavLink activeClassName='active' exact to='hours'>
                     <ListItem button>
                         <ListItemIcon>
-                            <BusinessIcon />
+                            <StarIcon />
                         </ListItemIcon>
                         <div className={classes.sidebar}>
                             Mission
+                        </div>
+                    </ListItem>
+                </NavLink>
+
+
+                <NavLink activeClassName='active' exact to='reviews' >
+                    <ListItem button>
+                        <ListItemIcon>
+                            <AcademicsIcon />
+                        </ListItemIcon>
+                        <div className={classes.sidebar}>
+                            Academics
                         </div>
                     </ListItem>
                 </NavLink>
@@ -118,49 +134,20 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='reviews' >
-                    <ListItem button>
-                        <ListItemIcon>
-                            <StarIcon />
-                        </ListItemIcon>
-                        <div className={classes.sidebar}>
-                            Academics
-                        </div>
-                    </ListItem>
-                </NavLink>
-
                 <NavLink activeClassName='active' exact to='directions' >
                     <ListItem button>
                         <ListItemIcon>
                             <DirectionsIcon />
                         </ListItemIcon>
                         <div className={classes.sidebar}>
-                            Admissions
+                            Directions
                         </div>
                     </ListItem>
                 </NavLink>
-                <NavLink activeClassName='active' exact to='directions' >
-                    <ListItem button>
-                        <ListItemIcon>
-                            <DirectionsIcon />
-                        </ListItemIcon>
-                        <div className={classes.sidebar}>
-                            Military
-                        </div>
-                    </ListItem>
-                </NavLink>
-
             </div>
         );
-
         const otherMailFolderListItems = (
             <div>
-                <ListItem button>
-                    <ListItemIcon>
-                        <DateRangeIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Appointments" />
-                </ListItem>
                 <ListItem button>
                     <ListItemIcon>
                         <ComputerIcon />
@@ -207,10 +194,8 @@ class SideBarItem extends Component {
                         </Drawer>
                     <Typography type="title" className={classes.flex}>
                         Horizon Education
-
                     </Typography>
                 </Toolbar>
-
             </div>
         )
     }
