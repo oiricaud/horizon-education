@@ -34,7 +34,7 @@ const styles = theme => ({
         maxWidth: 400,
     },
     media: {
-        height: 200,
+        height: 300,
         marginBottom:20,
     },
     list: {
@@ -85,7 +85,7 @@ class SideBarItem extends Component {
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.media}
-                        image={process.env.PUBLIC_URL + 'banner/stars.jpg'}
+                        image={process.env.PUBLIC_URL + 'icons/horizon-black.png'}
                         title="Contemplative Reptile"
                     />
                 </Card>

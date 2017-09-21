@@ -15,7 +15,7 @@ const styles = theme => ({
     },
     gridList: {
         paddingTop: 50,
-        width: 1050,
+        width: 1500,
         cellHeight: '100%',
     },
     subheader: {
@@ -35,7 +35,7 @@ const tileDataFirstRow = [
         img: process.env.PUBLIC_URL + './students/student1.jpg',
         title: 'Image',
         author: 'author',
-        cols: 1,
+        cols: 0,
     },
 ];
 
@@ -48,6 +48,35 @@ const tileDataSecondRow = [
     },
 ];
 
+
+const tileDataThirdRow = [
+    {
+        img: 'https://unsplash.it/600/400/?random',
+        title: 'Image',
+        author: 'author',
+        cols: 0,
+    },
+    {
+        img: 'https://unsplash.it/600/400/?random',
+        title: 'Image',
+        author: 'author',
+        cols: 1,
+    },
+    {
+        img: 'https://unsplash.it/600/400/?random',
+        title: 'Image',
+        author: 'author',
+        cols: 2,
+    },
+    {
+        img: 'https://unsplash.it/600/400/?random',
+        title: 'Image',
+        author: 'author',
+        cols: 3,
+    },
+];
+
+
 function ImageGridList(props) {
     const classes = props.classes;
 
@@ -55,13 +84,12 @@ function ImageGridList(props) {
         <div className={classes.root}>
             <GridList cellHeight={500} className={classes.gridList} cols={2}>
                 {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                    <GridListTile key={tile.img} cols={0}>
                         <img src={tile.img} alt={tile.title} />
                     </GridListTile>
-
                 ))}
                 {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
+                    <GridListTile key={tile.img} cols={1}>
                         <h1 className={classes.quote} >"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</h1>
                     </GridListTile>
                 ))}
@@ -74,6 +102,29 @@ function ImageGridList(props) {
                 ))}
                 {tileDataSecondRow.map(tile => (
                     <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+            </GridList>
+
+            <GridList cellHeight={400} className={classes.gridList} cols={2}>
+                {tileDataThirdRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 || 1 || 2}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+                {tileDataThirdRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 || 1 || 2}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+                {tileDataThirdRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 || 1 || 2}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+                {tileDataThirdRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 || 1 || 2}>
                         <img src={tile.img} alt={tile.title} />
                     </GridListTile>
                 ))}
