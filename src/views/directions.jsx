@@ -7,8 +7,8 @@ import {Button, Grid, Paper, Typography} from "../../node_modules/material-ui/in
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 
 const coords = {
-    lat: 31.82340889999999,
-    lng: -106.52476109999998
+    lat: 31.6822916,
+    lng: -106.1845318
 };
 
 const params = {v: '3.exp', key: 'AIzaSyCsToWIw_h81_6izX--bdkEEkBtcPMJBWs'};
@@ -106,10 +106,10 @@ class Directions extends Component {
                                 <CardMedia
                                     className={classes.media}
                                     image="https://unsplash.it/500/350"
-                                    title="Mountains banner"
+                                    title="Directions banner"
                                 />
                                 <div>
-                                    <Typography type="title" className={classes.header}>  Directions </Typography>
+                                    <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>
                                 <div  className={classes.hoursSmall}>
                                     <Gmaps
@@ -118,7 +118,7 @@ class Directions extends Component {
                                         lat={coords.lat}
                                         lng={coords.lng}
                                         zoom={15}
-                                        loadingMessage={'Be happy'}
+                                        loadingMessage={'Loading...'}
                                         params={params}
                                         onMapCreated={this.onMapCreated}>
                                         <Marker
@@ -129,7 +129,7 @@ class Directions extends Component {
                                         <InfoWindow
                                             lat={coords.lat}
                                             lng={coords.lng}
-                                            content={'HeadQuarters Hair & Apperal '}
+                                            content={'Horizon Education Main Campus'}
                                             onCloseClick={this.onCloseClick} />
                                         <Circle
                                             lat={coords.lat}
@@ -147,10 +147,10 @@ class Directions extends Component {
                                 <CardMedia
                                     className={classes.media}
                                     image="https://unsplash.it/2048/350"
-                                    title="Mountains banner"
+                                    title="Directions banner"
                                 />
                                 <div>
-                                    <Typography type="title" className={classes.header}>  Directions </Typography>
+                                    <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>
                                 <div  className={classes.hoursLarge}>
                                     <Gmaps
@@ -159,7 +159,7 @@ class Directions extends Component {
                                         lat={coords.lat}
                                         lng={coords.lng}
                                         zoom={16}
-                                        loadingMessage={'Be happy'}
+                                        loadingMessage={'Loading...'}
                                         params={params}
                                         onMapCreated={this.onMapCreated}>
                                         <Marker
@@ -170,7 +170,7 @@ class Directions extends Component {
                                         <InfoWindow
                                             lat={coords.lat}
                                             lng={coords.lng}
-                                            content={'HeadQuarters Hair & Apperal '}
+                                            content={'Horizon Education Main Campus'}
                                             onCloseClick={this.onCloseClick} />
                                         <Circle
                                             lat={coords.lat}
