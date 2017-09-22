@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {BrowserRouter, Route } from 'react-router-dom'
 import { withStyles } from 'material-ui/styles';
 import HomeView from './views/home.jsx';
-import HoursView from './views/hours.jsx';
+import HoursView from './views/mission.jsx';
 import CallView from './views/call.jsx';
 import DirectionsView from './views/directions.jsx';
 import MySideBar from './components/sidebar.jsx';

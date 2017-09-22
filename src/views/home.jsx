@@ -77,7 +77,6 @@ class Home extends Component {
                                 </div>
                             )}
                         </MediaReact>
-
                     </div>
                 </Paper>
             </div>
