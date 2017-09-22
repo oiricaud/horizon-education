@@ -24,7 +24,7 @@ const styles = theme => ({
     },
     gridList: {
         paddingTop: 50,
-        width: 1500,
+        width: 1150,
         cellHeight: '100%',
     },
     subheader: {
@@ -66,32 +66,8 @@ function ImageGridList(props) {
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={0}>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
-                ))}
-                {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={1}>
-                        <h1 className={classes.quote} >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"</h1>
-                    </GridListTile>
-                ))}
-            </GridList>
-            <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                {tileDataSecondRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
-                        <h1 className={classes.quote} >" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
-                    </GridListTile>
-                ))}
-                {tileDataSecondRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
-                ))}
-            </GridList>
             <div className={classes.cards}>
-                <Grid container spacing={24}>
+                <Grid container spacing={40}>
                     <Grid item xs={12} sm={6}>
                         <Card className={classes.card}>
                             <CardMedia
@@ -145,7 +121,7 @@ function ImageGridList(props) {
                         </Card>
                     </Grid>
                 </Grid>
-                <Grid container spacing={24}>
+                <Grid container spacing={40}>
                     <Grid item xs={12} sm={6}>
                         <Card className={classes.card}>
                             <CardMedia
@@ -200,6 +176,31 @@ function ImageGridList(props) {
                     </Grid>
                 </Grid>
             </div>
+            <GridList cellHeight={500} className={classes.gridList} cols={2}>
+                {tileDataFirstRow.map(tile => (
+                    <GridListTile key={tile.img} cols={0}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+                {tileDataFirstRow.map(tile => (
+                    <GridListTile key={tile.img} cols={1}>
+                        <h1 className={classes.quote} >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"</h1>
+                    </GridListTile>
+                ))}
+            </GridList>
+            <GridList cellHeight={500} className={classes.gridList} cols={2}>
+                {tileDataSecondRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
+                        <h1 className={classes.quote} >" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
+                    </GridListTile>
+                ))}
+                {tileDataSecondRow.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+            </GridList>
+
         </div>
     );
 }
