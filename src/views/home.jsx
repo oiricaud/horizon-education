@@ -7,6 +7,7 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import MyLargeTiles from '../components/large-tiles.jsx';
 import MySmallTiles from '../components/small-tiles.jsx';
+import MyForum from '../components/forum.jsx';
 import {AppBar, Button, Dialog, Divider, Grid, IconButton, List, Toolbar} from "../../node_modules/material-ui/index";
 import Card from "../../node_modules/material-ui/Card/Card";
 import {CardActions, CardContent} from "../../node_modules/material-ui/Card/index";
@@ -14,6 +15,7 @@ import {GridList, GridListTile} from "../../node_modules/material-ui/GridList/in
 import {ListItem, ListItemText} from "../../node_modules/material-ui/List/index";
 import CloseIcon from 'material-ui-icons/Close';
 import Slide from 'material-ui/transitions/Slide';
+import TextField from "../../node_modules/material-ui/TextField/TextField";
 // using CommonJS modules
 var MediaReact = require('react-media')
 const styles = theme => ({
@@ -26,6 +28,7 @@ const styles = theme => ({
     },
     appBar: {
         position: 'relative',
+        backgroundColor: 'cadetblue',
     },
     banner:{
         height: 250,
@@ -78,6 +81,11 @@ const styles = theme => ({
         marginTop: 30,
         marginBottom: 10,
     },
+    textField: {
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+        width: 200,
+    },
 });
 class Home extends Component {
 
@@ -101,6 +109,7 @@ class Home extends Component {
 
     state = {
         open: false,
+
     };
 
     handleClickOpen = () => {
@@ -109,6 +118,19 @@ class Home extends Component {
 
     handleRequestClose = () => {
         this.setState({ open: false });
+    };
+
+
+    handleChangeMultiline = event => {
+        this.setState({
+            multiline: event.target.value,
+        });
+    };
+
+    handleChange = name => event => {
+        this.setState({
+            [name]: event.target.value,
+        });
     };
 
     render() {
@@ -174,22 +196,75 @@ class Home extends Component {
                                                                         <CloseIcon />
                                                                     </IconButton>
                                                                     <Typography type="title" color="inherit" className={classes.flex}>
-                                                                        Sound
+                                                                        Enroll
                                                                     </Typography>
                                                                     <Button color="contrast" onClick={this.handleRequestClose}>
-                                                                        save
+                                                                        Submit
                                                                     </Button>
                                                                 </Toolbar>
                                                             </AppBar>
-                                                            <List>
-                                                                <ListItem button>
-                                                                    <ListItemText primary="Phone ringtone" secondary="Titania" />
-                                                                </ListItem>
-                                                                <Divider />
-                                                                <ListItem button>
-                                                                    <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-                                                                </ListItem>
-                                                            </List>
+                                                            <form className={classes.container} noValidate autoComplete="off">
+                                                                <TextField
+                                                                    id="firstName"
+                                                                    label="First Name"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="initial"
+                                                                    label="Initial"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="lastName"
+                                                                    label="Last Name"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="uncontrolled"
+                                                                    label="Address"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="uncontrolled"
+                                                                    label="City"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="uncontrolled"
+                                                                    label="State"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="uncontrolled"
+                                                                    label="Zip"
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    required
+                                                                    id="required"
+                                                                    label="Email Address"
+                                                                    defaultValue=""
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                                <TextField
+                                                                    id="multiline-flexible"
+                                                                    label="Phone Number"
+                                                                    multiline
+                                                                    rowsMax="4"
+                                                                    value={this.state.multiline}
+                                                                    onChange={this.handleChangeMultiline}
+                                                                    className={classes.textField}
+                                                                    margin="normal"
+                                                                />
+                                                            </form>
                                                         </Dialog>
                                                         <Button dense color="primary">
                                                             Learn More
