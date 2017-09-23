@@ -87,7 +87,7 @@ class Call extends Component {
                                     title="Mountains banner"
                                 />
                                 <div>
-                                    <Typography type="title" className={classes.header}> Phone: 915-999-6044  </Typography>
+                                    <Typography type="title" className={classes.header}> Phone: null  </Typography>
                                 </div>
                                 <div  className={classes.hoursSmall}>
                                     <Typography type="title" className={classes.header}>  Hours </Typography>
@@ -102,13 +102,13 @@ class Call extends Component {
                                             <Typography type="title1" className={classes.flex}> Sunday </Typography>
                                         </Grid>
                                         <Grid item xs={6}>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 6pm </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
                                         </Grid>
                                     </Grid>
                                 </div>
@@ -124,7 +124,7 @@ class Call extends Component {
                                     title="Mountains banner"
                                 />
                                 <div>
-                                    <Typography type="title" className={classes.header}>  Phone: 915-999-6044 </Typography>
+                                    <Typography type="title" className={classes.header}>  null </Typography>
 
                                 </div>
                                 <div  className={classes.hoursLarge}>
@@ -140,13 +140,13 @@ class Call extends Component {
                                             <Typography type="title1" className={classes.flex}> Sunday </Typography>
                                         </Grid>
                                         <Grid item xs={6}>
-                                            <Typography type="title1" className={classes.flex}> 10am - 7pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 7pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 7pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 7pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 7pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> 10am - 5pm </Typography>
-                                            <Typography type="title1" className={classes.flex}> Closed </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
+                                            <Typography type="title1" className={classes.flex}> null </Typography>
                                         </Grid>
                                     </Grid>
                                 </div>

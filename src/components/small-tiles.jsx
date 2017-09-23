@@ -64,15 +64,6 @@ const tileDataSecondRow = [
     },
 ];
 
-const tileDataThirdRow = [
-    {
-        img: process.env.PUBLIC_URL + './students/sm-student2.jpg',
-        title: 'Image',
-        author: 'author',
-        rows: 2,
-        cols: 0,
-    },
-];
 function ImageGridList(props) {
     const classes = props.classes;
 

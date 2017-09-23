@@ -26,7 +26,7 @@ const styles = theme => ({
         marginTop:7,
     },
     paperSmall: theme.mixins.gutters({
-        backgroundColor: 'darkslategray',
+        backgroundColor: 'darkcyan',
         paddingTop: 8,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 2,
@@ -43,7 +43,7 @@ const styles = theme => ({
     },
 
     paperLarge: theme.mixins.gutters({
-        backgroundColor: 'darkslategray',
+        backgroundColor: 'darkcyan',
         paddingTop: 8,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 10,
@@ -61,7 +61,6 @@ const styles = theme => ({
         fontWeight: 'light',
         color: 'white'
     },
-
     flex: {
         flex: 1,
         fontWeight: 100,
@@ -86,7 +85,7 @@ class Hours extends Component {
                             <Paper className={classes.paperSmall} elevation={10}>
                                 <CardMedia
                                     className={classes.media}
-                                    image={process.env.PUBLIC_URL + 'banner/clock.jpg'}
+                                    image={process.env.PUBLIC_URL + 'banner/mission.jpg'}
                                     title="Mountains banner"
                                 />
                                 <div>
@@ -104,7 +103,7 @@ class Hours extends Component {
                             <Paper className={classes.paperLarge} elevation={10}>
                                 <CardMedia
                                     className={classes.media}
-                                    image={process.env.PUBLIC_URL + 'banner/clock.jpg'}
+                                    image={process.env.PUBLIC_URL + 'banner/mission.jpg'}
                                     title="Mountains banner"
                                 />
                                 <div>

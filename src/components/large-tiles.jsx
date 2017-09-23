@@ -6,9 +6,21 @@ import { withStyles } from 'material-ui/styles';
 import { GridList, GridListTile } from 'material-ui/GridList';
 import Card from "../../node_modules/material-ui/Card/Card";
 import {CardActions, CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
-import {Button, Grid, Paper, Typography} from "../../node_modules/material-ui/index";
+import {
+    AppBar, Button, Divider, Grid, IconButton, List, Paper, Toolbar,
+    Typography
+} from "../../node_modules/material-ui/index";
+import {ListItem, ListItemText} from "../../node_modules/material-ui/List/index";
+import classes from "../../node_modules/material-ui/styles/zIndex";
+import CloseIcon from 'material-ui-icons/Close';
 
 const styles = theme => ({
+    appBar: {
+        position: 'relative',
+    },
+    flex: {
+        flex: 1,
+    },
     root: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -40,7 +52,7 @@ const styles = theme => ({
     cards:{
         marginTop: 30,
         marginBottom: 10,
-    }
+    },
 });
 
 const tileDataFirstRow = [
@@ -62,144 +74,10 @@ const tileDataSecondRow = [
 ];
 
 function ImageGridList(props) {
-    const classes = props.classes;
-
+    const classes = props.classes
     return (
         <div className={classes.root}>
-            <div className={classes.cards}>
-                <Grid container spacing={40}>
-                    <Grid item xs={12} sm={6}>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.media}
-                                image={process.env.PUBLIC_URL + './students/medical-assistant.jpg'}
-                                title="Contemplative Reptile"
-                            />
-                            <CardContent>
-                                <Typography type="headline" component="h2">
-                                    Medical Assistant
-                                </Typography>
-                                <Typography component="p">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    sint occaecat cupidatat non proident, sunt in culpa
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button dense color="primary">
-                                    Enroll
-                                </Button>
-                                <Button dense color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.media}
-                                image={process.env.PUBLIC_URL + './students/paralegal.jpg'}
-                                title="Contemplative Reptile"
-                            />
-                            <CardContent>
-                                <Typography type="headline" component="h2">
-                                    Paralegal
-                                </Typography>
-                                <Typography component="p">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    sint occaecat cupidatat non proident, sunt in culpa
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button dense color="primary">
-                                    Enroll
-                                </Button>
-                                <Button dense color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                </Grid>
-                <Grid container spacing={40}>
-                    <Grid item xs={12} sm={6}>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.media}
-                                image={process.env.PUBLIC_URL + './students/programmer.jpg'}
-                                title="Contemplative Reptile"
-                            />
-                            <CardContent>
-                                <Typography type="headline" component="h2">
-                                    IT
-                                </Typography>
-                                <Typography component="p">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    sint occaecat cupidatat non proident, sunt in culpa
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button dense color="primary">
-                                    Enroll
-                                </Button>
-                                <Button dense color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.media}
-                                image={process.env.PUBLIC_URL + './students/phelebotomy.jpg'}
-                                title="Contemplative Reptile"
-                            />
-                            <CardContent>
-                                <Typography type="headline" component="h2">
-                                    Phlebotomy
-                                </Typography>
-                                <Typography component="p">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    sint occaecat cupidatat non proident, sunt in culpa
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button dense color="primary">
-                                    Enroll
-                                </Button>
-                                <Button dense color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                </Grid>
-            </div>
-            <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={0}>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
-                ))}
-                {tileDataFirstRow.map(tile => (
-                    <GridListTile key={tile.img} cols={1}>
-                        <h1 className={classes.quote} >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"</h1>
-                    </GridListTile>
-                ))}
-            </GridList>
-            <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                {tileDataSecondRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 0 }>
-                        <h1 className={classes.quote} >" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
-                    </GridListTile>
-                ))}
-                {tileDataSecondRow.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1 }>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
-                ))}
-            </GridList>
+
 
         </div>
     );

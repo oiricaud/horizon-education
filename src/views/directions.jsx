@@ -103,11 +103,6 @@ class Directions extends Component {
                     {matches => matches ? (
                         <div>
                             <Paper className={classes.paperSmall} elevation={10}>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="https://unsplash.it/500/350"
-                                    title="Directions banner"
-                                />
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>
@@ -144,11 +139,7 @@ class Directions extends Component {
                     ) : (
                         <div>
                             <Paper className={classes.paperLarge} elevation={10}>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="https://unsplash.it/2048/350"
-                                    title="Directions banner"
-                                />
+
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>
