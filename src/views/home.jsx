@@ -6,15 +6,13 @@ import { CardMedia } from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import CareerCards from '../components/cards-careers.jsx';
-import {AppBar, Button, Dialog, Divider, Grid, IconButton, List, Toolbar} from "../../node_modules/material-ui/index";
+import {Grid} from "../../node_modules/material-ui/index";
 import Card from "../../node_modules/material-ui/Card/Card";
-import {CardActions, CardContent} from "../../node_modules/material-ui/Card/index";
+import {CardContent} from "../../node_modules/material-ui/Card/index";
 import {GridList, GridListTile} from "../../node_modules/material-ui/GridList/index";
-import CloseIcon from 'material-ui-icons/Close';
-import Slide from 'material-ui/transitions/Slide';
 
 // using CommonJS modules
-var MediaReact = require('react-media')
+let MediaReact = require('react-media')
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -22,10 +20,6 @@ const styles = theme => ({
         justifyContent: 'center',
         overflow: 'hidden',
         background: theme.palette.background.paper,
-    },
-    appBar: {
-        position: 'relative',
-        backgroundColor: 'cadetblue',
     },
     banner:{
         height: 250,
@@ -63,10 +57,6 @@ const styles = theme => ({
         paddingTop: 50,
         width: 1150,
         cellHeight: '100%',
-    },
-    subheader: {
-        width: '100%',
-        height: '100%',
     },
     quote:{
         color: 'deepskyblue',
@@ -119,6 +109,7 @@ class Home extends Component {
             cols: 1,
         },
     ];
+
     handleRequestClose = () => {
         this.setState({ open: false });
     };

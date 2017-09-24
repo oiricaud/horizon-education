@@ -13,12 +13,11 @@ import CloseIcon from 'material-ui-icons/Close';
 import Slide from 'material-ui/transitions/Slide';
 import TextField from "../../node_modules/material-ui/TextField/TextField";
 import {CardActions} from "../../node_modules/material-ui/Card/index";
-import {Grid, Paper} from "../../node_modules/material-ui/index";
 
 const styles = theme => ({
     root: {
-        flexGrow: 1,
-        marginTop: 30,
+        marginTop: theme.spacing.unit * 3,
+        width: '100%',
     },
     appBar: {
         position: 'relative',
@@ -33,8 +32,8 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        marginLeft: theme.spacing.unit  * 3,
+        marginRight: theme.spacing.unit  * 3,
         maxWidth: 250
     },
 });
@@ -52,11 +51,10 @@ class FullScreenDialog extends React.Component {
         this.setState({ open: false });
     };
 
-
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className={classes.root}>
                 <CardActions>
                     <Button  dense color="primary"  onClick={this.handleClickOpen}>
                         Enroll
@@ -67,6 +65,7 @@ class FullScreenDialog extends React.Component {
                     onRequestClose={this.handleRequestClose}
                     transition={<Slide direction="up" />}
                 >
+                <div>
                     <AppBar className={classes.appBar}>
                         <Toolbar>
                             <IconButton color="contrast" onClick={this.handleRequestClose} aria-label="Close">
@@ -142,7 +141,7 @@ class FullScreenDialog extends React.Component {
                             margin="normal"
                         />
                     </form>
-
+                </div>
                 </Dialog>
                     <Button dense color="primary">
                         Learn More
