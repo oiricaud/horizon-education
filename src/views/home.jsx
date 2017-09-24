@@ -54,7 +54,6 @@ const styles = theme => ({
         height: 200,
     },
     gridList: {
-        paddingTop: 50,
         width: 1150,
         cellHeight: '100%',
     },
@@ -66,7 +65,7 @@ const styles = theme => ({
     },
     cards:{
         marginTop: 30,
-        marginBottom: 10,
+        marginBottom: 40,
         marginLeft: 5,
         marginRight: 5,
     },
@@ -132,19 +131,24 @@ class Home extends Component {
                         title="Mountains banner"
                     />
                     <div>
-                        <h1> Welcome </h1>
+                        <h1> Horizon Education </h1>
                     </div>
                     <h4> Main Campus 14476 N. Horizon Blvd Suite H</h4>
                     <Typography type="body1" component="p">
-                        Horizon Education is from the community, for the community. Horizon Education is on a mission to
+                                Horizon Education is from the community, for the community. Horizon Education is on a mission to
                         provide high quality education to help students actively seeking education to increase, improve,
                         and develop their skills to obtain employment and career success. Committed to helping the community
                         by increasing the employment rate with highly trained professionals will make an improved successful
-                        community. As our era is in a fast and accelerated change phase in the career fields, Horizon
+                        community.
+                    </Typography>
+                    <br></br>
+                    <Typography type="body1" component="p">
+                                As our era is in a fast and accelerated change phase in the career fields, Horizon
                         Education recognizes it, it takes the responsibility to provide and prepare its students for
                         any upcoming changes in the career field of choice by guiding the students, and providing high
                         quality education related to the career field of choice.
                     </Typography>
+
                     <div>
                         <MediaReact query="(max-width: 599px)">
                             {matches => matches ? (
@@ -237,19 +241,9 @@ class Home extends Component {
                                             </Grid>
                                         </div>
                                         <GridList cellHeight={200} className={classes.gridList} cols={1}>
-                                            {this.smTileDataFirstRow.map(tile => (
-                                                <GridListTile key={tile.img} cols={0}>
-                                                    <img src={tile.img} alt={tile.title} />
-                                                </GridListTile>
-                                            ))}
                                             {this.smTileDataSecondRow.map(tile => (
                                                 <GridListTile key={tile.img} cols={tile.cols || 1 }>
                                                     <img src={tile.img} alt={tile.title} />
-                                                </GridListTile>
-                                            ))}
-                                            {this.smTileDataFirstRow.map(tile => (
-                                                <GridListTile key={tile.img} cols={1}>
-                                                    <h1 className={classes.quote} >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"</h1>
                                                 </GridListTile>
                                             ))}
                                         </GridList>
@@ -257,6 +251,58 @@ class Home extends Component {
                             ) : (
                                 <div className={classes.root}>
                                     <div className={classes.cards}>
+                                        <Grid container spacing={40}>
+                                            <Grid item xs={12} sm={6}>
+                                                <Card className={classes.card}>
+                                                    <CardMedia
+                                                        className={classes.media}
+                                                        image={process.env.PUBLIC_URL + './students/network-admin.jpg'}
+                                                        title="Network Administrator (IT)"
+                                                    />
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
+                                                        <Typography type="headline" component="h2">
+                                                            Network Administrator (IT)
+                                                        </Typography>
+                                                        <Typography
+                                                            component="p">
+                                                            The Network Administrator (IT) diploma program is designed to
+                                                            prepare students for entry level employment in the IT field.
+                                                            The program prepares students with the skills and knowledge
+                                                            needed to set-up, maintain, troubleshoot, and repair computers
+                                                            and small computer networks.
+                                                        </Typography>
+                                                    </CardContent>
+                                                    <CareerCards>
+                                                    </CareerCards>
+                                                </Card>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <Card className={classes.card}>
+                                                    <CardMedia
+                                                        className={classes.media}
+                                                        image={process.env.PUBLIC_URL + './students/medical-bill.jpg'}
+                                                        title="Medical Billing and Office Procedures (MBOP)"
+                                                    />
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
+                                                        <Typography type="headline" component="h2">
+                                                            Medical Billing & Office Procedures
+                                                        </Typography>
+                                                        <Typography component="p">
+                                                            The Medical Insurance Billing and Coding diploma program
+                                                            focuses on procedural knowledge of industry practices and
+                                                            close attention to details. The program includes instruction
+                                                            in the basic concepts and procedures necessary to perform
+                                                            the tasks associated with filling out health insurance forms,
+                                                            coding medical practice procedures, and medical terminology.
+                                                        </Typography>
+                                                    </CardContent>
+                                                    <CareerCards>
+                                                    </CareerCards>
+                                                </Card>
+                                            </Grid>
+                                        </Grid>
                                         <Grid container spacing={40}>
                                             <Grid item xs={12} sm={6}>
                                                 <Card className={classes.card}>

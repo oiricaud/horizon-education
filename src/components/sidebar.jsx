@@ -193,7 +193,7 @@ class SideBarItem extends Component {
                             {sideList}
                         </Drawer>
                     <Typography type="title" className={classes.flex}>
-                        Horizon Education
+                        Menu
                     </Typography>
                 </Toolbar>
             </div>
