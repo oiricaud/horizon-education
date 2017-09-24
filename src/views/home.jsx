@@ -82,9 +82,14 @@ const styles = theme => ({
         marginBottom: 10,
     },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        paddingTop: 8,
+        paddingBottom: 16,
+        marginTop: theme.spacing.unit * 3,
+        marginBottom: theme.spacing.unit * 3,
+        marginLeft: theme.spacing.unit * 3,
+        marginRight: theme.spacing.unit * 3,
         width: 200,
+
     },
 });
 class Home extends Component {
@@ -164,6 +169,7 @@ class Home extends Component {
                                 <div className={classes.root}>
                                     <div className={classes.cards}>
                                         <Grid container spacing={40}>
+
                                             <Grid item xs={12} sm={6}>
                                                 <Card className={classes.card}>
                                                     <CardMedia
@@ -203,68 +209,8 @@ class Home extends Component {
                                                                     </Button>
                                                                 </Toolbar>
                                                             </AppBar>
-                                                            <form className={classes.container} noValidate autoComplete="off">
-                                                                <TextField
-                                                                    id="firstName"
-                                                                    label="First Name"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="initial"
-                                                                    label="Initial"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="lastName"
-                                                                    label="Last Name"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="uncontrolled"
-                                                                    label="Address"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="uncontrolled"
-                                                                    label="City"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="uncontrolled"
-                                                                    label="State"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="uncontrolled"
-                                                                    label="Zip"
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    required
-                                                                    id="required"
-                                                                    label="Email Address"
-                                                                    defaultValue=""
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                                <TextField
-                                                                    id="multiline-flexible"
-                                                                    label="Phone Number"
-                                                                    multiline
-                                                                    rowsMax="4"
-                                                                    value={this.state.multiline}
-                                                                    onChange={this.handleChangeMultiline}
-                                                                    className={classes.textField}
-                                                                    margin="normal"
-                                                                />
-                                                            </form>
+                                                            <MyForum>
+                                                            </MyForum>
                                                         </Dialog>
                                                         <Button dense color="primary">
                                                             Learn More
@@ -272,6 +218,7 @@ class Home extends Component {
                                                     </CardActions>
                                                 </Card>
                                             </Grid>
+
                                             <Grid item xs={12} sm={6}>
                                                 <Card className={classes.card}>
                                                     <CardMedia
@@ -289,9 +236,31 @@ class Home extends Component {
                                                         </Typography>
                                                     </CardContent>
                                                     <CardActions>
-                                                        <Button dense color="primary">
+                                                        <Button  dense color="primary"  onClick={this.handleClickOpen}>
                                                             Enroll
                                                         </Button>
+                                                        <Dialog
+                                                            fullScreen
+                                                            open={this.state.open}
+                                                            onRequestClose={this.handleRequestClose}
+                                                            transition={<Slide direction="up" />}
+                                                        >
+                                                            <AppBar className={classes.appBar}>
+                                                                <Toolbar>
+                                                                    <IconButton color="contrast" onClick={this.handleRequestClose} aria-label="Close">
+                                                                        <CloseIcon />
+                                                                    </IconButton>
+                                                                    <Typography type="title" color="inherit" className={classes.flex}>
+                                                                        Enroll
+                                                                    </Typography>
+                                                                    <Button color="contrast" onClick={this.handleRequestClose}>
+                                                                        Submit
+                                                                    </Button>
+                                                                </Toolbar>
+                                                            </AppBar>
+                                                            <MyForum>
+                                                            </MyForum>
+                                                        </Dialog>
                                                         <Button dense color="primary">
                                                             Learn More
                                                         </Button>
@@ -317,9 +286,31 @@ class Home extends Component {
                                                         </Typography>
                                                     </CardContent>
                                                     <CardActions>
-                                                        <Button dense color="primary">
+                                                        <Button  dense color="primary"  onClick={this.handleClickOpen}>
                                                             Enroll
                                                         </Button>
+                                                        <Dialog
+                                                            fullScreen
+                                                            open={this.state.open}
+                                                            onRequestClose={this.handleRequestClose}
+                                                            transition={<Slide direction="up" />}
+                                                        >
+                                                            <AppBar className={classes.appBar}>
+                                                                <Toolbar>
+                                                                    <IconButton color="contrast" onClick={this.handleRequestClose} aria-label="Close">
+                                                                        <CloseIcon />
+                                                                    </IconButton>
+                                                                    <Typography type="title" color="inherit" className={classes.flex}>
+                                                                        Enroll
+                                                                    </Typography>
+                                                                    <Button color="contrast" onClick={this.handleRequestClose}>
+                                                                        Submit
+                                                                    </Button>
+                                                                </Toolbar>
+                                                            </AppBar>
+                                                            <MyForum>
+                                                            </MyForum>
+                                                        </Dialog>
                                                         <Button dense color="primary">
                                                             Learn More
                                                         </Button>
@@ -343,9 +334,31 @@ class Home extends Component {
                                                         </Typography>
                                                     </CardContent>
                                                     <CardActions>
-                                                        <Button dense color="primary">
+                                                        <Button  dense color="primary"  onClick={this.handleClickOpen}>
                                                             Enroll
                                                         </Button>
+                                                        <Dialog
+                                                            fullScreen
+                                                            open={this.state.open}
+                                                            onRequestClose={this.handleRequestClose}
+                                                            transition={<Slide direction="up" />}
+                                                        >
+                                                            <AppBar className={classes.appBar}>
+                                                                <Toolbar>
+                                                                    <IconButton color="contrast" onClick={this.handleRequestClose} aria-label="Close">
+                                                                        <CloseIcon />
+                                                                    </IconButton>
+                                                                    <Typography type="title" color="inherit" className={classes.flex}>
+                                                                        Enroll
+                                                                    </Typography>
+                                                                    <Button color="contrast" onClick={this.handleRequestClose}>
+                                                                        Submit
+                                                                    </Button>
+                                                                </Toolbar>
+                                                            </AppBar>
+                                                            <MyForum>
+                                                            </MyForum>
+                                                        </Dialog>
                                                         <Button dense color="primary">
                                                             Learn More
                                                         </Button>

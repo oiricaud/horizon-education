@@ -11,15 +11,25 @@ import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import CloseIcon from 'material-ui-icons/Close';
 import Slide from 'material-ui/transitions/Slide';
+import TextField from "../../node_modules/material-ui/TextField/TextField";
 
-const styles = {
+const styles = theme => ({
     appBar: {
         position: 'relative',
     },
     flex: {
         flex: 1,
     },
-};
+    textField: {
+        paddingTop: 8,
+        paddingBottom: 16,
+        marginTop: theme.spacing.unit * 3,
+        marginBottom: theme.spacing.unit * 3,
+        marginLeft: theme.spacing.unit * 3,
+        marginRight: theme.spacing.unit * 3,
+        width: 200,
+    },
+});
 
 class FullScreenDialog extends React.Component {
     state = {
@@ -38,28 +48,68 @@ class FullScreenDialog extends React.Component {
         const { classes } = this.props;
         return (
             <div>
-                 <AppBar className={classes.appBar}>
-                        <Toolbar>
-                            <IconButton color="contrast" onClick={this.handleRequestClose} aria-label="Close">
-                                <CloseIcon />
-                            </IconButton>
-                            <Typography type="title" color="inherit" className={classes.flex}>
-                                Sound
-                            </Typography>
-                            <Button color="contrast" onClick={this.handleRequestClose}>
-                                save
-                            </Button>
-                        </Toolbar>
-                    </AppBar>
-                    <List>
-                        <ListItem button>
-                            <ListItemText primary="Phone ringtone" secondary="Titania" />
-                        </ListItem>
-                        <Divider />
-                        <ListItem button>
-                            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-                        </ListItem>
-                    </List>
+                <form className={classes.container} noValidate autoComplete="off">
+                    <TextField
+                        id="firstName"
+                        label="First Name"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="lastName"
+                        label="Last Name"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="initial"
+                        label="Initial"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="address"
+                        label="Address"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="city"
+                        label="City"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="state"
+                        label="State"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="zip"
+                        label="Zip"
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        required
+                        id="emailAddress"
+                        label="Email Address"
+                        defaultValue=""
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                    <TextField
+                        id="phoneNumber"
+                        label="Phone Number"
+                        multiline
+                        rowsMax="4"
+                        value={this.state.multiline}
+                        onChange={this.handleChangeMultiline}
+                        className={classes.textField}
+                        margin="normal"
+                    />
+                </form>
             </div>
         );
     }
