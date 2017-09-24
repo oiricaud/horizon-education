@@ -70,6 +70,9 @@ const styles = theme => ({
         marginLeft: 5,
         marginRight: 5,
     },
+    cardcontent:{
+        maxHeight: 90,
+    }
 });
 class Home extends Component {
 
@@ -133,10 +136,14 @@ class Home extends Component {
                     </div>
                     <h4> Main Campus 14476 N. Horizon Blvd Suite H</h4>
                     <Typography type="body1" component="p">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                        Horizon Education is from the community, for the community. Horizon Education is on a mission to
+                        provide high quality education to help students actively seeking education to increase, improve,
+                        and develop their skills to obtain employment and career success. Committed to helping the community
+                        by increasing the employment rate with highly trained professionals will make an improved successful
+                        community. As our era is in a fast and accelerated change phase in the career fields, Horizon
+                        Education recognizes it, it takes the responsibility to provide and prepare its students for
+                        any upcoming changes in the career field of choice by guiding the students, and providing high
+                        quality education related to the career field of choice.
                     </Typography>
                     <div>
                         <MediaReact query="(max-width: 599px)">
@@ -155,9 +162,10 @@ class Home extends Component {
                                                             <Typography type="headline" component="h2">
                                                                 Medical Assistant
                                                             </Typography>
-                                                            <Typography component="p">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                                sint occaecat cupidatat non proident, sunt in culpa
+                                                            <Typography
+                                                                component="p">
+                                                                The Medical Assisting diploma program is designed to provide students with
+                                                                an understanding of the medical office environment and administering to the needs of both patients and doctors.
                                                             </Typography>
                                                         </CardContent>
                                                         <CareerCards>
@@ -176,8 +184,8 @@ class Home extends Component {
                                                                 Paralegal
                                                             </Typography>
                                                             <Typography component="p">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                                sint occaecat cupidatat non proident, sunt in culpa
+                                                                This course gives a general overview of the legal system and the role of the paralegal within the system with
+                                                                regard to structure of the court system, administrative agencies, private law firm, and the public sector.
                                                             </Typography>
                                                         </CardContent>
                                                         <CareerCards>
@@ -198,8 +206,8 @@ class Home extends Component {
                                                                 IT
                                                             </Typography>
                                                             <Typography component="p">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                                sint occaecat cupidatat non proident, sunt in culpa
+                                                                The A+ certification is designed to prepare students for entry level
+                                                                employment in the IT field.
                                                             </Typography>
                                                         </CardContent>
                                                         <CareerCards>
@@ -218,8 +226,8 @@ class Home extends Component {
                                                                 Phlebotomy
                                                             </Typography>
                                                             <Typography component="p">
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                                sint occaecat cupidatat non proident, sunt in culpa
+                                                                This course will cover the anatomy and physiology of the cardiovascular
+                                                                system and address the legal and ethical issues associated with being a Phlebotomist.
                                                             </Typography>
                                                         </CardContent>
                                                         <CareerCards>
@@ -250,7 +258,6 @@ class Home extends Component {
                                 <div className={classes.root}>
                                     <div className={classes.cards}>
                                         <Grid container spacing={40}>
-
                                             <Grid item xs={12} sm={6}>
                                                 <Card className={classes.card}>
                                                     <CardMedia
@@ -258,20 +265,21 @@ class Home extends Component {
                                                         image={process.env.PUBLIC_URL + './students/medical-assistant.jpg'}
                                                         title="Contemplative Reptile"
                                                     />
-                                                    <CardContent>
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
                                                         <Typography type="headline" component="h2">
                                                             Medical Assistant
                                                         </Typography>
-                                                        <Typography component="p">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                            sint occaecat cupidatat non proident, sunt in culpa
+                                                        <Typography
+                                                            component="p">
+                                                            The Medical Assisting diploma program is designed to provide students with
+                                                            an understanding of the medical office environment and administering to the needs of both patients and doctors.
                                                         </Typography>
                                                     </CardContent>
                                                     <CareerCards>
                                                     </CareerCards>
                                                 </Card>
                                             </Grid>
-
                                             <Grid item xs={12} sm={6}>
                                                 <Card className={classes.card}>
                                                     <CardMedia
@@ -279,13 +287,14 @@ class Home extends Component {
                                                         image={process.env.PUBLIC_URL + './students/paralegal.jpg'}
                                                         title="Contemplative Reptile"
                                                     />
-                                                    <CardContent>
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
                                                         <Typography type="headline" component="h2">
                                                             Paralegal
                                                         </Typography>
                                                         <Typography component="p">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                            sint occaecat cupidatat non proident, sunt in culpa
+                                                            This course gives a general overview of the legal system and the role of the paralegal within the system with
+                                                            regard to structure of the court system, administrative agencies, private law firm, and the public sector.
                                                         </Typography>
                                                     </CardContent>
                                                     <CareerCards>
@@ -301,13 +310,14 @@ class Home extends Component {
                                                         image={process.env.PUBLIC_URL + './students/programmer.jpg'}
                                                         title="Contemplative Reptile"
                                                     />
-                                                    <CardContent>
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
                                                         <Typography type="headline" component="h2">
-                                                            IT
+                                                            IT A+
                                                         </Typography>
                                                         <Typography component="p">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                            sint occaecat cupidatat non proident, sunt in culpa
+                                                            The A+ certification is designed to prepare students for entry level
+                                                            employment in the IT field.
                                                         </Typography>
                                                     </CardContent>
                                                     <CareerCards>
@@ -321,13 +331,14 @@ class Home extends Component {
                                                         image={process.env.PUBLIC_URL + './students/phelebotomy.jpg'}
                                                         title="Contemplative Reptile"
                                                     />
-                                                    <CardContent>
+                                                    <CardContent
+                                                        className={classes.cardcontent}>
                                                         <Typography type="headline" component="h2">
                                                             Phlebotomy
                                                         </Typography>
                                                         <Typography component="p">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                            sint occaecat cupidatat non proident, sunt in culpa
+                                                            This course will cover the anatomy and physiology of the cardiovascular
+                                                            system and address the legal and ethical issues associated with being a Phlebotomist.
                                                         </Typography>
                                                     </CardContent>
                                                     <CareerCards>
