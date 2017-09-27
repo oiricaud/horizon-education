@@ -50,7 +50,7 @@ const styles = theme => ({
         color: '#FAFAFA'
     },
     logoImage:{
-        img: process.env.PUBLIC_URL + './icons/horizoneducation.jpg',
+        img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
     }
 });
 

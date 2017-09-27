@@ -201,7 +201,9 @@ class FullScreenDialog extends React.Component {
                             </form>
                         </div>
                         </Dialog>
-                            <LearnMore>
+                            <LearnMore
+                                title={this.props.title}
+                                onClick={this.handleRequestClose}>
                             </LearnMore>
                     </CardActions>
                 </Card>

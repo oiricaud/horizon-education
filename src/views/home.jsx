@@ -53,33 +53,27 @@ const styles = theme => ({
     },
 });
 class Home extends Component {
-    smTileDataSecondRow = [
+    horizonEducationTile = [
         {
-            img: process.env.PUBLIC_URL + './icons/horizoneducation.jpg',
-            title: 'Image',
-            author: 'author',
+            img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
+            title: 'Horizon Education Logo',
             cols: 1,
         },
     ];
-
-    lgTileDataFirstRow = [
+    studentTile = [
         {
             img: process.env.PUBLIC_URL + './students/student1.jpg',
-            title: 'Image',
-            author: 'author',
+            title: 'Student 1',
             cols: 0,
         },
     ];
-
-    lgTileDataSecondRow = [
+    groupStudentTile = [
         {
-            img: process.env.PUBLIC_URL + './students/lg-student2.jpg',
-            title: 'Image',
-            author: 'author',
+            img: process.env.PUBLIC_URL + './students/group-of-students.jpg',
+            title: 'Group Of Students',
             cols: 1,
         },
     ];
-
     handleRequestClose = () => {
         this.setState({ open: false });
     };
@@ -88,6 +82,7 @@ class Home extends Component {
             multiline: event.target.value,
         });
     };
+
     render() {
         const classes = this.props.classes;
         return(
@@ -184,12 +179,12 @@ class Home extends Component {
                                 </Grid>
                             </Grid>
                         </div>
-                        
+
                         <MediaReact query="(max-width: 599px)">
                             {matches => matches ? (
                                     <div className={classes.root}>
                                         <GridList cellHeight={200} className={classes.gridList} cols={1}>
-                                            {this.smTileDataSecondRow.map(tile => (
+                                            {this.horizonEducationTile.map(tile => (
                                                 <GridListTile key={tile.img} cols={tile.cols || 1 }>
                                                     <img src={tile.img} alt={tile.title} />
                                                 </GridListTile>
@@ -199,24 +194,24 @@ class Home extends Component {
                             ) : (
                                 <div className={classes.root}>
                                     <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                                        {this.lgTileDataFirstRow.map(tile => (
+                                        {this.studentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={0}>
                                                 <img src={tile.img} alt={tile.title} />
                                             </GridListTile>
                                         ))}
-                                        {this.lgTileDataFirstRow.map(tile => (
+                                        {this.studentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={1}>
                                                 <h1 className={classes.quote} >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"</h1>
                                             </GridListTile>
                                         ))}
                                     </GridList>
                                     <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                                        {this.lgTileDataSecondRow.map(tile => (
+                                        {this.groupStudentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={tile.cols || 0 }>
                                                 <h1 className={classes.quote} >" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
                                             </GridListTile>
                                         ))}
-                                        {this.lgTileDataSecondRow.map(tile => (
+                                        {this.groupStudentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={tile.cols || 1 }>
                                                 <img src={tile.img} alt={tile.title} />
                                             </GridListTile>
@@ -234,6 +229,7 @@ class Home extends Component {
 
 Home.propTypes = {
     classes: PropTypes.object.isRequired,
+    title: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Home);

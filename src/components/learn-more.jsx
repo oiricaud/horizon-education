@@ -47,7 +47,7 @@ class SimpleDialog extends React.Component {
                 <DialogTitle>Network Administrator (IT)</DialogTitle>
                 <div>
                     <List>
-                        <h1> here </h1>
+                        <h1> here {this.props.title} </h1>
                     </List>
                 </div>
             </Dialog>
