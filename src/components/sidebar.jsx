@@ -23,7 +23,7 @@ const styles = theme => ({
     root: {
         marginTop: 0,
         width: '100%',
-        backgroundColor:'cornflowerblue',
+        backgroundColor:'#002147',
     },
     card: {
         maxWidth: 400,
@@ -42,7 +42,7 @@ const styles = theme => ({
     },
     flex: {
         flex: 1,
-        color: '#FAFAFA'
+        color:'white',
     },
     logoImage:{
         img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
