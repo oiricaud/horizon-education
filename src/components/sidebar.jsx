@@ -6,23 +6,18 @@ import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-
 import {BrowserRouter, Route, NavLink } from 'react-router-dom'
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-
-import BusinessIcon from 'material-ui-icons/Business';
 import PhoneIcon from 'material-ui-icons/Phone';
 import AcademicsIcon from 'material-ui-icons/ModeEdit';
 import DirectionsIcon from 'material-ui-icons/Directions';
-import DateRangeIcon from 'material-ui-icons/DateRange';
-
-
 import StarIcon from 'material-ui-icons/Star';
+import PersonIcon from 'material-ui-icons/Person';
+import MoneyIcon from 'material-ui-icons/AttachMoney';
 import HomeIcon from 'material-ui-icons/Home';
 import ComputerIcon from 'material-ui-icons/Computer';
 import Toolbar from 'material-ui/Toolbar';
 import MenuIcon from 'material-ui-icons/Menu';
-import SchoolIcon from 'material-ui-icons/School';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
-import Icon from 'material-ui/Icon';
 
 const styles = theme => ({
     root: {
@@ -52,10 +47,20 @@ const styles = theme => ({
     logoImage:{
         img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
     }
+
 });
+
+function TabContainer(props) {
+    return <div style={{ padding: 20 }}>{props.children}</div>;
+}
+
+TabContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 class SideBarItem extends Component {
     state = {
+        value: 0,
         open: {
             top: false,
             left: false,
@@ -63,6 +68,9 @@ class SideBarItem extends Component {
             right: false,
         },
         expanded: false
+    };
+    handleChange = (event, value) => {
+        this.setState({ value });
     };
     toggleDrawer = (side, open) => {
         const drawerState = {};
@@ -79,6 +87,7 @@ class SideBarItem extends Component {
 
     render(){
         const classes = this.props.classes;
+        const { value } = this.state;
 
         const mailFolderListItems = (
             <div>
@@ -95,22 +104,10 @@ class SideBarItem extends Component {
                             <HomeIcon />
                         </ListItemIcon>
                         <div className={classes.sidebar}>
-                           Home
+                           About
                         </div>
                     </ListItem>
                 </NavLink>
-
-                <NavLink activeClassName='active' exact to='hours'>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <StarIcon />
-                        </ListItemIcon>
-                        <div className={classes.sidebar}>
-                            Mission
-                        </div>
-                    </ListItem>
-                </NavLink>
-
 
                 <NavLink activeClassName='active' exact to='reviews' >
                     <ListItem button>
@@ -129,7 +126,7 @@ class SideBarItem extends Component {
                             <PhoneIcon />
                         </ListItemIcon>
                         <div className={classes.sidebar}>
-                            Contact
+                            Admissions
                         </div>
                     </ListItem>
                 </NavLink>
@@ -141,6 +138,39 @@ class SideBarItem extends Component {
                         </ListItemIcon>
                         <div className={classes.sidebar}>
                             Directions
+                        </div>
+                    </ListItem>
+                </NavLink>
+
+                <NavLink activeClassName='active' exact to='call' >
+                    <ListItem button>
+                        <ListItemIcon>
+                            <PersonIcon />
+                        </ListItemIcon>
+                        <div className={classes.sidebar}>
+                            Faculty
+                        </div>
+                    </ListItem>
+                </NavLink>
+
+                <NavLink activeClassName='active' exact to='call' >
+                    <ListItem button>
+                        <ListItemIcon>
+                            <MoneyIcon />
+                        </ListItemIcon>
+                        <div className={classes.sidebar}>
+                            Finance
+                        </div>
+                    </ListItem>
+                </NavLink>
+
+                <NavLink activeClassName='active' exact to='hours'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <StarIcon />
+                        </ListItemIcon>
+                        <div className={classes.sidebar}>
+                            Mission
                         </div>
                     </ListItem>
                 </NavLink>
@@ -204,6 +234,8 @@ class SideBarItem extends Component {
 
 SideBarItem.propTypes = {
     classes: PropTypes.object.isRequired,
+    children: PropTypes.node.isRequired,
+
 };
 
 export default withStyles(styles)(SideBarItem);

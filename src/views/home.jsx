@@ -7,8 +7,6 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import CareerCards from '../components/cards-careers.jsx';
 import {Grid} from "../../node_modules/material-ui/index";
-import Card from "../../node_modules/material-ui/Card/Card";
-import {CardContent} from "../../node_modules/material-ui/Card/index";
 import {GridList, GridListTile} from "../../node_modules/material-ui/GridList/index";
 
 // using CommonJS modules
@@ -22,7 +20,7 @@ const styles = theme => ({
         background: theme.palette.background.paper,
     },
     banner:{
-        height: 250,
+        height: 350,
     },
     flex: {
         flex: 1,
