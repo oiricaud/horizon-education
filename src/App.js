@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css'
 import PropTypes from 'prop-types';
-import {BrowserRouter, Route } from 'react-router-dom'
-import { withStyles } from 'material-ui/styles';
+import {BrowserRouter, Route} from 'react-router-dom'
+import {withStyles} from 'material-ui/styles';
 import HomeView from './views/home.jsx';
-import HoursView from './views/mission.jsx';
+import AcademicsView from './views/academics.jsx';
 import CallView from './views/call.jsx';
 import DirectionsView from './views/directions.jsx';
 import MySideBar from './components/sidebar.jsx';
 import MyFooter from './components/footer.jsx';
 import ReactGA from 'react-ga';
+
 ReactGA.initialize('UA-106748981-1');
 
 
@@ -36,8 +37,8 @@ class App extends Component {
                 <Route exact path='/' render={() => <HomeView> </HomeView>} />
                 <Route
                     exact
-                    path='/hours'
-                    render={() => <HoursView> </HoursView>}
+                    path='/academics'
+                    render={() => <AcademicsView> </AcademicsView>}
                 />
                 <Route
                     exact

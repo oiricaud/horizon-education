@@ -110,7 +110,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='reviews' >
+                <NavLink activeClassName='active' exact to='academics'>
                     <ListItem button>
                         <ListItemIcon>
                             <AcademicsIcon />
@@ -121,7 +121,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='call' >
+                <NavLink activeClassName='active' exact to='admissions'>
                     <ListItem button>
                         <ListItemIcon>
                             <PhoneIcon />
@@ -143,7 +143,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='call' >
+                <NavLink activeClassName='active' exact to='faculty'>
                     <ListItem button>
                         <ListItemIcon>
                             <PersonIcon />
@@ -154,7 +154,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='call'>
+                <NavLink activeClassName='active' exact to='faq'>
                     <ListItem button>
                         <ListItemIcon>
                             <FaqIcon/>
@@ -165,7 +165,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='call' >
+                <NavLink activeClassName='active' exact to='finance'>
                     <ListItem button>
                         <ListItemIcon>
                             <MoneyIcon />
@@ -176,7 +176,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='hours'>
+                <NavLink activeClassName='active' exact to='mission'>
                     <ListItem button>
                         <ListItemIcon>
                             <StarIcon />
