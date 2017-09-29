@@ -42,7 +42,7 @@ const styles = theme => ({
     },
     flex: {
         flex: 1,
-        color:'white',
+        color:'white'
     },
     logoImage:{
         img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',

@@ -16,7 +16,7 @@ import {List} from "../../node_modules/material-ui/index";
 import LearnMore from '../components/learn-more.jsx';
 import {ListItem} from "../../node_modules/material-ui/List/index";
 import Card from "../../node_modules/material-ui/Card/Card";
-
+let MediaReact = require('react-media')
 const styles = theme => ({
     root: {
         marginTop: theme.spacing.unit * 3,
@@ -100,6 +100,13 @@ class FullScreenDialog extends React.Component {
     render() {
         const { classes } = this.props;
         const SimpleDialogWrapped = withStyles(styles)(SimpleDialog);
+
+        function shortInfo(info) {
+            return info.substring(0, 210);
+        }
+        function shorterInfo(info) {
+            return info.substring(0,130);
+        }
         return (
             <div className={classes.root}>
                 <Card className={classes.card}>
@@ -108,11 +115,25 @@ class FullScreenDialog extends React.Component {
                         image={this.props.image}
                         title={this.props.title}
                     />
-                    <CardContent
-                        className={classes.cardcontent}>
-                        <Typography type="headline" component="h2"> {this.props.title} </Typography>
-                        <Typography component="p"> {this.props.info} </Typography>
-                    </CardContent>
+                    <MediaReact query="(max-width: 599px)">
+                        {matches => matches ? (
+                            <div className={classes.root}>
+                                <CardContent
+                                    className={classes.cardcontent}>
+                                    <Typography type="headline" component="h2"> {this.props.title} </Typography>
+                                    <Typography component="p" customLength={2}> {shorterInfo(this.props.info) + '...'} </Typography>
+                                </CardContent>
+                            </div>
+                            ) : (
+                            <div className={classes.root}>
+                                <CardContent
+                                    className={classes.cardcontent}>
+                                    <Typography type="headline" component="h2"> {this.props.title} </Typography>
+                                    <Typography component="p" customLength={2}> {shortInfo(this.props.info) + '...'} </Typography>
+                                </CardContent>
+                             </div>
+                            )}
+                    </MediaReact>
                         <CardActions>
                             <Button  dense color="primary"  onClick={this.handleClickOpen}>
                                 Enroll
@@ -203,6 +224,8 @@ class FullScreenDialog extends React.Component {
                         </Dialog>
                             <LearnMore
                                 title={this.props.title}
+                                image={this.props.image}
+                                info={this.props.info}
                                 onClick={this.handleRequestClose}>
                             </LearnMore>
                     </CardActions>

@@ -4,9 +4,11 @@ import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Dialog from 'material-ui/Dialog';
 import {DialogTitle} from "../../node_modules/material-ui/Dialog/index";
-import {List} from "../../node_modules/material-ui/index";
+import {List, Typography} from "../../node_modules/material-ui/index";
 import LearnMore from '../components/learn-more.jsx';
 import {ListItem} from "../../node_modules/material-ui/List/index";
+import Card from "../../node_modules/material-ui/Card/Card";
+import {CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
 
 const styles = theme => ({
     root: {
@@ -14,6 +16,18 @@ const styles = theme => ({
     appBar: {
         position: 'relative',
         backgroundColor: 'cadetblue',
+    },
+    card: {
+        maxWidth: 550,
+    },
+    cards:{
+        marginTop: 30,
+        marginBottom: 40,
+        marginLeft: 5,
+        marginRight: 5,
+    },
+    media: {
+        height: 200,
     },
     flex: {
         flex: 1,
@@ -30,30 +44,7 @@ const styles = theme => ({
     },
 });
 
-class SimpleDialog extends React.Component {
-    handleRequestClose = () => {
-        this.props.onRequestClose(this.props.selectedValue);
-    };
 
-    handleListItemClick = value => {
-        this.props.onRequestClose(value);
-    };
-
-    render() {
-        const { classes, onRequestClose, selectedValue, ...other } = this.props;
-
-        return (
-            <Dialog onRequestClose={this.handleRequestClose} {...other}>
-                <DialogTitle>Network Administrator (IT)</DialogTitle>
-                <div>
-                    <List>
-                        <h1> here {this.props.title} </h1>
-                    </List>
-                </div>
-            </Dialog>
-        );
-    }
-}
 
 class Bleh extends React.Component {
     state = {
@@ -67,21 +58,29 @@ class Bleh extends React.Component {
     handleRequestClose = () => {
         this.setState({ open: false });
     };
-    SimpleDialog = {
-        classes: PropTypes.object.isRequired,
-        onRequestClose: PropTypes.func,
-        selectedValue: PropTypes.string,
-    };
     render() {
         const { classes } = this.props;
-        const SimpleDialogWrapped = withStyles(styles)(SimpleDialog);
         return (
             <div className={classes.root}>
                 <Button dense color="primary" onClick={this.handleClickOpen}>Learn More</Button>
-                <SimpleDialogWrapped
-                    open={this.state.open}
-                    onRequestClose={this.handleRequestClose}
-                />
+                <Dialog onRequestClose={this.handleRequestClose} open={this.state.open}>
+                    <DialogTitle>{this.props.title} </DialogTitle>
+                    <div>
+                        <Card className={classes.card}>
+                            <CardMedia
+                                className={classes.media}
+                                image={this.props.image}
+                                title={this.props.title}
+                            />
+                            <CardContent
+                                className={classes.cardcontent}>
+                                <Typography type="headline" component="h2"> {this.props.title} </Typography>
+                                <Typography component="p"> {this.props.info} </Typography>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Dialog>
+
             </div>
         );
     }
@@ -89,6 +88,9 @@ class Bleh extends React.Component {
 
 Bleh.propTypes = {
     classes: PropTypes.object.isRequired,
+    title: React.PropTypes.func,
+    info: React.PropTypes.func,
+    image: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Bleh);

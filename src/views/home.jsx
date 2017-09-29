@@ -83,6 +83,7 @@ class Home extends Component {
 
     render() {
         const classes = this.props.classes;
+
         return(
             <div>
                 <Paper className={classes.paper} elevation={10}>
@@ -96,7 +97,7 @@ class Home extends Component {
                     </div>
                     <h4> Main Campus 14476 N. Horizon Blvd Suite H</h4>
                     <Typography type="body1" component="p">
-                                Horizon Education is from the community, for the community. Horizon Education is on a mission to
+                        Horizon Education is from the community, for the community. Horizon Education is on a mission to
                         provide high quality education to help students actively seeking education to increase, improve,
                         and develop their skills to obtain employment and career success. Committed to helping the community
                         by increasing the employment rate with highly trained professionals will make an improved successful
@@ -117,8 +118,17 @@ class Home extends Component {
                                     <CareerCards
                                         title={'Network Administrator (IT)'}
                                         image={process.env.PUBLIC_URL + './students/network-admin.jpg'}
-                                        info={' The Network Administrator (IT) diploma program is designed to\n' +
-                                        '       prepare students for entry level employment in the IT field.\n'}
+                                        info={'The Network Administrator (IT) diploma program is designed to ' +
+                                        'prepare students for entry level employment in the IT field. The program' +
+                                        ' prepares students with the skills and knowledge needed to set-up, ' +
+                                        'maintain, troubleshoot, and repair computers and small computer' +
+                                        ' networks. Graduates will leave the program with the hands-on ' +
+                                        'experience, customer service skills, and A+ & Net+ certifications ' +
+                                        'expected by today’s employers. The Information Technology diploma ' +
+                                        'program prepares graduates for positions such Help Desk Analyst, ' +
+                                        'Customer Support Representative, Technical Support Specialist, ' +
+                                        'Network Installer, and Field Service Technician. Upon completion' +
+                                        ' of this program a Diploma is awarded.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -126,9 +136,7 @@ class Home extends Component {
                                     <CareerCards
                                         title={'Medical Billing & Office Procedures'}
                                         image={process.env.PUBLIC_URL + './students/medical-bill.jpg'}
-                                        info={'  The Medical Insurance Billing and Coding diploma program\n' +
-                                        '        focuses on procedural knowledge of industry practices and\n' +
-                                        '        close attention to details. '}
+                                        info={'The Medical Insurance Billing and Coding diploma program focuses on procedural knowledge of industry practices and close attention to details. The program includes instruction in the basic concepts and procedures necessary to perform the tasks associated with filling out health insurance forms, coding medical practice procedures, and medical terminology. Medical Insurance Billing and Coding (MIBC) professionals perform a variety of administrative health information functions, including those associated with organizing, analyzing, and technically evaluating health insurance claim forms and coding diseases, surgeries, medical procedures, and other therapies for billing. Graduates from the program may seek employment in hospitals, urgent care facilities, clinics, insurance companies, home healthcare agencies, and pharmaceutical companies. The program prepares individuals to work as medical insurance billing and coding clerks. Upon completion of the program, students will receive a Diploma.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -138,19 +146,16 @@ class Home extends Component {
                                     <CareerCards
                                         title={'Medical Assistant'}
                                         image={process.env.PUBLIC_URL + './students/medical-assistant.jpg'}
-                                        info={'  The Medical Assisting diploma program is designed to provide students with\n' +
-                                        ' an understanding of the medical office environment and' +
-                                        ' administering to the needs of both patients and doctors.'}
+                                        info={'The Medical Assisting diploma program is designed to provide students with an understanding of the medical office environment and administering to the needs of both patients and doctors. Students will have opportunities to study and learn about administrative, clinical, and laboratory procedures; phlebotomy; EKG procedures; medical terminology; anatomy and physiology; record keeping; insurance billing; and pharmacology. Job-seeking techniques and interpersonal skills are also addressed. Graduates of the Medical Assisting program will be prepared to seek employment in doctors’ offices, hospitals, and related businesses. Upon completion of the program, a Diploma is rewarded.'}
                                     >
                                     </CareerCards>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <CareerCards
                                         title={'Paralegal'}
+
                                         image={process.env.PUBLIC_URL + './students/paralegal.jpg'}
-                                        info={'    This course gives a general overview of the legal system and the role of the paralegal within the system with\n' +
-                                        ' regard to structure of the court system, administrative' +
-                                        ' agencies, private law firm, and the public sector.'}
+                                        info={'This course gives a general overview of the legal system and the role of the paralegal within the system with regard to structure of the court system, administrative agencies, private law firm, and the public sector.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -160,8 +165,7 @@ class Home extends Component {
                                     <CareerCards
                                         title={'IT A+'}
                                         image={process.env.PUBLIC_URL + './students/programmer.jpg'}
-                                        info={'  The A+ certification is designed to prepare students for entry level\n' +
-                                        '       employment in the IT field.'}
+                                        info={'The A+ certification is designed to prepare students for entry level employment in the IT field. The A+ certification prepares students with the skills and knowledge needed to set-up, maintain, troubleshoot, and repair computers and small computer networks. Graduates will leave the program with the hands-on experience, customer service skills, and A+ certifications expected by today’s employers. The A+ prepares graduates for positions such Help Desk Analyst, Customer Support Representative, Technical Support Specialist, and Field Service Technician.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -169,9 +173,7 @@ class Home extends Component {
                                     <CareerCards
                                         title={'Phlebotomy'}
                                         image={process.env.PUBLIC_URL + './students/phelebotomy.jpg'}
-                                        info={'   This course will cover the anatomy and physiology of the cardiovascular\n' +
-                                        ' system and address the legal and ethical issues associated' +
-                                        ' with being a Phlebotomist.'}
+                                        info={'This course will cover the anatomy and physiology of the cardiovascular system and address the legal and ethical issues associated with being a Phlebotomist. Students will be trained to perform a variety of blood collection methods using proper techniques and precautions including: vacuum collection devices, syringes, capillary skin puncture, butterfly needles, and blood cultures specimen collection on adults, children and infants. Emphasis will be placed on infection prevention; proper patient identification; proper labeling, handling, processing, and accessioning of specimens; quality assurance.'}
                                     >
                                     </CareerCards>
                                 </Grid>
