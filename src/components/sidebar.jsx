@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
-import {BrowserRouter, Route, NavLink } from 'react-router-dom'
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import {withStyles} from 'material-ui/styles';
+import Card, {CardMedia} from 'material-ui/Card';
+import {NavLink} from 'react-router-dom'
+import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import PhoneIcon from 'material-ui-icons/Phone';
 import AcademicsIcon from 'material-ui-icons/ModeEdit';
 import DirectionsIcon from 'material-ui-icons/Directions';
 import StarIcon from 'material-ui-icons/Star';
 import PersonIcon from 'material-ui-icons/Person';
+import FaqIcon from 'material-ui-icons/QuestionAnswer';
 import MoneyIcon from 'material-ui-icons/AttachMoney';
 import HomeIcon from 'material-ui-icons/Home';
 import ComputerIcon from 'material-ui-icons/Computer';
@@ -149,6 +150,17 @@ class SideBarItem extends Component {
                         </ListItemIcon>
                         <div className={classes.sidebar}>
                             Faculty
+                        </div>
+                    </ListItem>
+                </NavLink>
+
+                <NavLink activeClassName='active' exact to='call'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <FaqIcon/>
+                        </ListItemIcon>
+                        <div className={classes.sidebar}>
+                            FAQ
                         </div>
                     </ListItem>
                 </NavLink>

@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import {CardActions, CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
-import {Button, Grid, Paper, Typography} from "../../node_modules/material-ui/index";
+import {withStyles} from 'material-ui/styles';
+import {Paper, Typography} from "../../node_modules/material-ui/index";
 // using ES modules
-import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+import {Circle, Gmaps, InfoWindow, Marker} from 'react-gmaps';
 
 const coords = {
     lat: 31.6822916,
@@ -178,7 +177,6 @@ class Directions extends Component {
         );
     }
 }
-
 
 Directions.propTypes = {
     classes: PropTypes.object.isRequired,

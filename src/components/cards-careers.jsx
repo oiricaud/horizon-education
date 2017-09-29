@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import {withStyles} from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Dialog from 'material-ui/Dialog';
 import AppBar from 'material-ui/AppBar';
@@ -14,8 +14,8 @@ import {CardActions, CardContent, CardMedia} from "../../node_modules/material-u
 import {DialogTitle} from "../../node_modules/material-ui/Dialog/index";
 import {List} from "../../node_modules/material-ui/index";
 import LearnMore from '../components/learn-more.jsx';
-import {ListItem} from "../../node_modules/material-ui/List/index";
 import Card from "../../node_modules/material-ui/Card/Card";
+
 let MediaReact = require('react-media')
 const styles = theme => ({
     root: {

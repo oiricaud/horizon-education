@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import {withStyles} from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Dialog from 'material-ui/Dialog';
 import {DialogTitle} from "../../node_modules/material-ui/Dialog/index";
-import {List, Typography} from "../../node_modules/material-ui/index";
-import LearnMore from '../components/learn-more.jsx';
-import {ListItem} from "../../node_modules/material-ui/List/index";
+import {Typography} from "../../node_modules/material-ui/index";
 import Card from "../../node_modules/material-ui/Card/Card";
 import {CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
+
 let MediaReact = require('react-media')
 const styles = theme => ({
     root: {
@@ -48,11 +47,10 @@ const styles = theme => ({
     }
 });
 
-class Bleh extends React.Component {
+class LearnMore extends React.Component {
     state = {
         open: false,
     };
-
     handleClickOpen = () => {
         this.setState({ open: true });
     };
@@ -92,17 +90,16 @@ class Bleh extends React.Component {
                         </Card>
                     </div>
                 </Dialog>
-
             </div>
         );
     }
 }
 
-Bleh.propTypes = {
+LearnMore.propTypes = {
     classes: PropTypes.object.isRequired,
     title: React.PropTypes.func,
     info: React.PropTypes.func,
     image: React.PropTypes.func,
 };
 
-export default withStyles(styles)(Bleh);
+export default withStyles(styles)(LearnMore);
