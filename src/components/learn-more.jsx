@@ -9,7 +9,7 @@ import LearnMore from '../components/learn-more.jsx';
 import {ListItem} from "../../node_modules/material-ui/List/index";
 import Card from "../../node_modules/material-ui/Card/Card";
 import {CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
-
+let MediaReact = require('react-media')
 const styles = theme => ({
     root: {
     },
@@ -42,9 +42,11 @@ const styles = theme => ({
         marginRight: theme.spacing.unit  * 3,
         maxWidth: 250
     },
+    information:{
+        overflowY: 'scroll',
+        maxHeight: 130,
+    }
 });
-
-
 
 class Bleh extends React.Component {
     state = {
@@ -75,7 +77,17 @@ class Bleh extends React.Component {
                             <CardContent
                                 className={classes.cardcontent}>
                                 <Typography type="headline" component="h2"> {this.props.title} </Typography>
-                                <Typography component="p"> {this.props.info} </Typography>
+                                <MediaReact query="(max-width: 599px)">
+                                {matches => matches ? (
+                                    <div className={classes.information}>
+                                        <Typography component="p"> {this.props.info} </Typography>
+                                    </div>
+                                    ): (
+                                        <div>
+                                            <Typography component="p"> {this.props.info} </Typography>
+                                        </div>
+                                )}
+                                </MediaReact>
                             </CardContent>
                         </Card>
                     </div>

@@ -53,7 +53,8 @@ const styles = theme => ({
     },
     cardcontent:{
         maxHeight: 120,
-    }
+    },
+
 });
 
 class SimpleDialog extends React.Component {
@@ -117,21 +118,19 @@ class FullScreenDialog extends React.Component {
                     />
                     <MediaReact query="(max-width: 599px)">
                         {matches => matches ? (
-                            <div className={classes.root}>
                                 <CardContent
                                     className={classes.cardcontent}>
                                     <Typography type="headline" component="h2"> {this.props.title} </Typography>
                                     <Typography component="p" customLength={2}> {shorterInfo(this.props.info) + '...'} </Typography>
                                 </CardContent>
-                            </div>
                             ) : (
-                            <div className={classes.root}>
+                            <div>
                                 <CardContent
                                     className={classes.cardcontent}>
                                     <Typography type="headline" component="h2"> {this.props.title} </Typography>
                                     <Typography component="p" customLength={2}> {shortInfo(this.props.info) + '...'} </Typography>
                                 </CardContent>
-                             </div>
+                            </div>
                             )}
                     </MediaReact>
                         <CardActions>
