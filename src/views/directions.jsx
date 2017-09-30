@@ -31,7 +31,6 @@ const styles = theme => ({
         marginTop:7,
     },
     paperSmall: theme.mixins.gutters({
-        backgroundColor: 'indianred',
         paddingTop: 8,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 2,
@@ -46,7 +45,6 @@ const styles = theme => ({
     },
 
     paperLarge: theme.mixins.gutters({
-        backgroundColor: 'indianred',
         paddingTop: 8,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 10,
@@ -67,12 +65,11 @@ const styles = theme => ({
         flex: 1,
         fontWeight: 100,
         margin: 20,
-        color: '#FAFAFA'
     },
     header:{
         fontWeight: 300,
+        marginTop: 20,
         fontSize: 30,
-        color: '#FAFAFA'
     }
 });
 

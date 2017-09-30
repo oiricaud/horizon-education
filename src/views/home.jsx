@@ -102,7 +102,7 @@ class Home extends Component {
                     <div>
                         <h1> Horizon Education </h1>
                     </div>
-                    <h4> History of the school</h4>
+                    <h4> History</h4>
                     <Typography type="body1" component="p">
                         Founder of Horizon Education LLC Samir A. Awale began his educational journey in 2007 when he
                         studied Web Graphic Design at a local institute called Computer Career Center (CCC), and

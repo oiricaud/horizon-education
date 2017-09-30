@@ -5,7 +5,8 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import {withStyles} from 'material-ui/styles';
 import HomeView from './views/home.jsx';
 import AcademicsView from './views/academics.jsx';
-import CallView from './views/call.jsx';
+import AdmissionsView from './views/admissions.jsx';
+
 import DirectionsView from './views/directions.jsx';
 import MySideBar from './components/sidebar.jsx';
 import MyFooter from './components/footer.jsx';
@@ -42,8 +43,8 @@ class App extends Component {
                 />
                 <Route
                     exact
-                    path='/call'
-                    render={() => <CallView> </CallView>}
+                    path='/admissions'
+                    render={() => <AdmissionsView> </AdmissionsView>}
                 />
                 <Route
                     exact
