@@ -135,12 +135,15 @@ class Home extends Component {
                         for himself along with his longtime friend Joel Pena. When they decided to go in business, they
                         were looking into locating the school in Horizon City TX. In a large shopping center located at
                         the main street of Horizon city called Horizon Boulevard, which created the name of the school
-                        Horizon Education. The building size was at 3400S/F that is divided into two big rooms. The
+                        Horizon Education.
+                    </Typography>
+                    <br></br>
+                    <Typography type="body1" component="p">
+                        The building size was at 3400S/F that is divided into two big rooms. The
                         facilities consist of administrative offices, classroom, library, lecture rooms, and computer
                         labs. The rooms are modern; well- equipped and provide adequate space for the approved
                         program(s). That was the beginning of a strong, and dependable organization, started from the
                         community for the community.
-
                     </Typography>
                     <Avatar
                         alt="Adelle Charles"

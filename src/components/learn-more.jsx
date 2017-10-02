@@ -74,7 +74,6 @@ class LearnMore extends React.Component {
                             />
                             <CardContent
                                 className={classes.cardcontent}>
-                                <Typography type="headline" component="h2"> {this.props.title} </Typography>
                                 <MediaReact query="(max-width: 599px)">
                                 {matches => matches ? (
                                     <div className={classes.information}>

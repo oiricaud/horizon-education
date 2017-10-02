@@ -107,12 +107,15 @@ class Admissions extends Component {
                         accumsan diam. Ut euismod elementum metus feugiat egestas. Curabitur ut sapien facilisis,
                         elementum metus eu, congue metus. Suspendisse vitae dignissim urna, semper elementum odio.
                         Maecenas turpis nibh, porta sed justo ac, interdum luctus neque. Cras lacinia leo quis justo
-                        euismod consequat. Cras mattis id ante vel vestibulum. Fusce elementum ac sem id laoreet.
-                        Vivamus vel sollicitudin libero. Mauris eget malesuada purus. Etiam condimentum arcu in ante
+                        euismod consequat.
+                    </Typography>
+                    <br></br>
+                    <Typography type="body1" component="p">
+                        Fusce elementum ac sem id laoreet. Vivamus vel sollicitudin libero. Mauris eget malesuada purus.
+                        Etiam condimentum arcu in ante
                         maximus rutrum. Proin consectetur a odio ut sagittis. Suspendisse viverra turpis et libero
                         facilisis scelerisque.
                     </Typography>
-
                     <div className={classes.root}>
                     </div>
                 </Paper>
