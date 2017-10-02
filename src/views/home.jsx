@@ -20,9 +20,7 @@ const styles = theme => ({
     banner:{
         height: 350,
     },
-    flex: {
-        flex: 1,
-    },
+
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -31,22 +29,7 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     }),
-    gridList: {
-        width: 1150,
-        cellHeight: '100%',
-    },
-    quote:{
-        color: 'deepskyblue',
-        fontSize: 36,
-        margin: 50,
-        textAlign: 'left',
-    },
-    cards:{
-        marginTop: 30,
-        marginBottom: 40,
-        marginLeft: 5,
-        marginRight: 5,
-    },
+
     avatar: {
         display: 'block',
         margin: 'auto',
@@ -57,36 +40,8 @@ const styles = theme => ({
         height: 150,
     },
 });
+
 class Home extends Component {
-    horizonEducationTile = [
-        {
-            img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
-            title: 'Horizon Education Logo',
-            cols: 1,
-        },
-    ];
-    studentTile = [
-        {
-            img: process.env.PUBLIC_URL + './students/student1.jpg',
-            title: 'Student 1',
-            cols: 0,
-        },
-    ];
-    groupStudentTile = [
-        {
-            img: process.env.PUBLIC_URL + './students/group-of-students.jpg',
-            title: 'Group Of Students',
-            cols: 1,
-        },
-    ];
-    handleRequestClose = () => {
-        this.setState({ open: false });
-    };
-    handleChangeMultiline = event => {
-        this.setState({
-            multiline: event.target.value,
-        });
-    };
 
     render() {
         const classes = this.props.classes;
@@ -100,7 +55,7 @@ class Home extends Component {
                         title="Mountains banner"
                     />
                     <div>
-                        <h1> Horizon Education </h1>
+                        <h1> About </h1>
                     </div>
                     <h4> History</h4>
                     <Typography type="body1" component="p">
@@ -110,7 +65,6 @@ class Home extends Component {
                         same institute CCC. His thrive to get higher and better in life, he got his higher education
                         from the University of Phoenix while he was working at CCC, where he achieved his Masters in
                         Information management in 2012.
-
                     </Typography>
                     <br></br>
                     <Typography type="body1" component="p">
@@ -123,6 +77,9 @@ class Home extends Component {
                         Institute’s top management realized the skills, knowledge, and education will qualify Samir for
                         the job, and since 2009, he has been working as a network administrator for computer career
                         Center.
+                    </Typography>
+                    <br></br>
+                    <Typography>
                         In the same year of 2009, Computer Career Center changed its name to Computer Career Center,
                         a Division of Vista College. In 2011, Computer Career Center, a Division of Vista College
                         changed
@@ -137,6 +94,7 @@ class Home extends Component {
                         the main street of Horizon city called Horizon Boulevard, which created the name of the school
                         Horizon Education.
                     </Typography>
+
                     <br></br>
                     <Typography type="body1" component="p">
                         The building size was at 3400S/F that is divided into two big rooms. The
@@ -145,6 +103,7 @@ class Home extends Component {
                         program(s). That was the beginning of a strong, and dependable organization, started from the
                         community for the community.
                     </Typography>
+
                     <Avatar
                         alt="Adelle Charles"
                         src={process.env.PUBLIC_URL + './faculty/bill-gates.jpg'}

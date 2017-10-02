@@ -14,16 +14,13 @@ import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-106748981-1');
 
-
 const styles = theme => ({
     root: {
         marginTop: 0,
         width: '100%',
         backgroundColor:'#fff',
     },
-    appBar: {
-        height: 60,
-    },
+
 });
 
 class App extends Component {

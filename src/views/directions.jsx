@@ -25,11 +25,7 @@ const styles = theme => ({
         height: 60,
     },
 
-    media: {
-        height: 300,
-        marginBottom:20,
-        marginTop:7,
-    },
+
     paperSmall: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,

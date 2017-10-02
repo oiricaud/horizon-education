@@ -22,9 +22,6 @@ const styles = theme => ({
     banner: {
         height: 350,
     },
-    flex: {
-        flex: 1,
-    },
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -204,17 +201,17 @@ class Academics extends Component {
                                         ))}
                                         {this.studentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={1}>
-                                                <h1 className={classes.quote}>"Lorem ipsum dolor sit amet, consectetur
-                                                    adipiscing elit, sed do eiusmod tempor incididunt"</h1>
+                                                <h1 className={classes.quote}>"Horizon Education is from the community,
+                                                    for the community."</h1>
                                             </GridListTile>
                                         ))}
                                     </GridList>
                                     <GridList cellHeight={500} className={classes.gridList} cols={2}>
                                         {this.groupStudentTile.map(tile => (
                                             <GridListTile key={tile.img} cols={tile.cols || 0}>
-                                                <h1 className={classes.quote}>" Excepteur sint occaecat cupidatat non
-                                                    proident, sunt in culpa qui officia deserunt mollit anim id est
-                                                    laborum."</h1>
+                                                <h1 className={classes.quote}>"Committed to helping the community by
+                                                    increasing the employment rate with highly trained professionals
+                                                    will make an improved successful community."</h1>
                                             </GridListTile>
                                         ))}
                                         {this.groupStudentTile.map(tile => (
