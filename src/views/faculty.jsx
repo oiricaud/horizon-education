@@ -5,6 +5,8 @@ import {withStyles} from 'material-ui/styles';
 import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
+import {Avatar, Grid} from "../../node_modules/material-ui/index";
+import classNames from 'classnames';
 
 // using CommonJS modules
 let MediaReact = require('react-media')
@@ -45,6 +47,16 @@ const styles = theme => ({
         marginBottom: 40,
         marginLeft: 5,
         marginRight: 5,
+    },
+    avatar: {
+        display: 'block',
+        margin: 'auto',
+        marginTop: 40,
+        textAlign: 'center'
+    },
+    bigAvatar: {
+        width: 150,
+        height: 150,
     },
 });
 
@@ -117,6 +129,80 @@ class Admissions extends Component {
                         facilisis scelerisque.
                     </Typography>
                     <div className={classes.root}>
+                        <Grid container spacing={24}>
+                            <Grid item xs={6}>
+                                <Avatar
+                                    alt="Adelle Charles"
+                                    src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                    className={classNames(classes.avatar, classes.bigAvatar)}
+                                />
+                                <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                    <Typography type="body1" component="p">
+                                        Name
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Job Title
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Short Summary
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Avatar
+                                    alt="Adelle Charles"
+                                    src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                    className={classNames(classes.avatar, classes.bigAvatar)}
+                                />
+                                <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                    <Typography type="body1" component="p">
+                                        Name
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Job Title
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Short Summary
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Avatar
+                                    alt="Adelle Charles"
+                                    src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                    className={classNames(classes.avatar, classes.bigAvatar)}
+                                />
+                                <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                    <Typography type="body1" component="p">
+                                        Name
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Job Title
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Short Summary
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Avatar
+                                    alt="Adelle Charles"
+                                    src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                    className={classNames(classes.avatar, classes.bigAvatar)}
+                                />
+                                <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                    <Typography type="body1" component="p">
+                                        Name
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Job Title
+                                    </Typography>
+                                    <Typography type="body1" component="p">
+                                        Short Summary
+                                    </Typography>
+                                </div>
+                            </Grid>
+                        </Grid>
                     </div>
                 </Paper>
             </div>
