@@ -128,9 +128,9 @@ class Admissions extends Component {
                         maximus rutrum. Proin consectetur a odio ut sagittis. Suspendisse viverra turpis et libero
                         facilisis scelerisque.
                     </Typography>
-                    <div className={classes.root}>
-                        <Grid container spacing={24}>
-                            <Grid item xs={6}>
+                    <MediaReact query="(max-width: 599px)">
+                        {matches => matches ? (
+                            <div>
                                 <Avatar
                                     alt="Adelle Charles"
                                     src={process.env.PUBLIC_URL + './faculty/default.jpg'}
@@ -147,8 +147,6 @@ class Admissions extends Component {
                                         Short Summary
                                     </Typography>
                                 </div>
-                            </Grid>
-                            <Grid item xs={6}>
                                 <Avatar
                                     alt="Adelle Charles"
                                     src={process.env.PUBLIC_URL + './faculty/default.jpg'}
@@ -165,8 +163,6 @@ class Admissions extends Component {
                                         Short Summary
                                     </Typography>
                                 </div>
-                            </Grid>
-                            <Grid item xs={6}>
                                 <Avatar
                                     alt="Adelle Charles"
                                     src={process.env.PUBLIC_URL + './faculty/default.jpg'}
@@ -183,8 +179,6 @@ class Admissions extends Component {
                                         Short Summary
                                     </Typography>
                                 </div>
-                            </Grid>
-                            <Grid item xs={6}>
                                 <Avatar
                                     alt="Adelle Charles"
                                     src={process.env.PUBLIC_URL + './faculty/default.jpg'}
@@ -201,9 +195,84 @@ class Admissions extends Component {
                                         Short Summary
                                     </Typography>
                                 </div>
+                            </div>
+                        ) : (
+                            <Grid container spacing={24}>
+                                <Grid item xs={6}>
+                                    <Avatar
+                                        alt="Adelle Charles"
+                                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                        className={classNames(classes.avatar, classes.bigAvatar)}
+                                    />
+                                    <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                        <Typography type="body1" component="p">
+                                            Name
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Job Title
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Short Summary
+                                        </Typography>
+                                    </div>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Avatar
+                                        alt="Adelle Charles"
+                                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                        className={classNames(classes.avatar, classes.bigAvatar)}
+                                    />
+                                    <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                        <Typography type="body1" component="p">
+                                            Name
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Job Title
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Short Summary
+                                        </Typography>
+                                    </div>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Avatar
+                                        alt="Adelle Charles"
+                                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                        className={classNames(classes.avatar, classes.bigAvatar)}
+                                    />
+                                    <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                        <Typography type="body1" component="p">
+                                            Name
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Job Title
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Short Summary
+                                        </Typography>
+                                    </div>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Avatar
+                                        alt="Adelle Charles"
+                                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
+                                        className={classNames(classes.avatar, classes.bigAvatar)}
+                                    />
+                                    <div className={classNames(classes.avatar, classes.bigAvatar)}>
+                                        <Typography type="body1" component="p">
+                                            Name
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Job Title
+                                        </Typography>
+                                        <Typography type="body1" component="p">
+                                            Short Summary
+                                        </Typography>
+                                    </div>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </div>
+                        )}
+                    </MediaReact>
                 </Paper>
             </div>
         );
