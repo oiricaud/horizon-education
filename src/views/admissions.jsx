@@ -87,7 +87,7 @@ class Admissions extends Component {
                 <Paper className={classes.paper} elevation={10}>
                     <CardMedia
                         className={classes.banner}
-                        image={process.env.PUBLIC_URL + 'banner/banner-3.jpg'}
+                        image={process.env.PUBLIC_URL + 'banner/admissions.jpg'}
                         title="Mountains banner"
                     />
                     <div>
