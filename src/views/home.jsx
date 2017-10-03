@@ -106,7 +106,7 @@ class Home extends Component {
 
                     <Avatar
                         alt="Adelle Charles"
-                        src={process.env.PUBLIC_URL + './faculty/bill-gates.jpg'}
+                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
                         className={classNames(classes.avatar, classes.bigAvatar)}
                     />
                 </Paper>

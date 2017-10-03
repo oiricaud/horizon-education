@@ -3,12 +3,15 @@ import './App.css'
 import PropTypes from 'prop-types';
 import {BrowserRouter, Route} from 'react-router-dom'
 import {withStyles} from 'material-ui/styles';
+import MySideBar from './components/sidebar.jsx';
 import HomeView from './views/home.jsx';
 import AcademicsView from './views/academics.jsx';
 import AdmissionsView from './views/admissions.jsx';
-
 import DirectionsView from './views/directions.jsx';
-import MySideBar from './components/sidebar.jsx';
+import FacultyView from './views/faculty.jsx';
+import FaqView from './views/faq.jsx';
+import FinanceView from './views/finance.jsx';
+import MissionView from './views/mission.jsx';
 import MyFooter from './components/footer.jsx';
 import ReactGA from 'react-ga';
 
@@ -45,18 +48,28 @@ class App extends Component {
                 />
                 <Route
                     exact
-                    path='/reviews'
-                    render={() => <h1> Reviews </h1>}
-                />
-                <Route
-                    exact
-                    path='/mail'
-                    render={() => <h1> Mail </h1>}
-                />
-                <Route
-                    exact
                     path='/directions'
                     render={() => <DirectionsView> </DirectionsView>}
+                />
+                <Route
+                    exact
+                    path='/faculty'
+                    render={() => <FacultyView> </FacultyView>}
+                />
+                <Route
+                    exact
+                    path='/faq'
+                    render={() => <FaqView> </FaqView>}
+                />
+                <Route
+                    exact
+                    path='/finance'
+                    render={() => <FinanceView> </FinanceView>}
+                />
+                <Route
+                    exact
+                    path='/mission'
+                    render={() => <MissionView> </MissionView>}
                 />
                 <MyFooter>
                 </MyFooter>

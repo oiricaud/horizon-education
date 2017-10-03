@@ -91,22 +91,30 @@ class Admissions extends Component {
                         title="Mountains banner"
                     />
                     <div>
-                        <h1> Mission </h1>
+                        <h1> Frequently Asked Questions </h1>
                     </div>
                     <Typography type="body1" component="p">
-                        Horizon Education is from the community, for the community. Horizon Education is on a mission to
-                        provide high quality education to help students actively seeking education to increase, improve,
-                        and develop their skills to obtain employment and career success. Committed to helping the
-                        community
-                        by increasing the employment rate with highly trained professionals will make an improved
-                        successful community.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada massa bibendum lorem
+                        cursus, nec auctor tellus porttitor. Nam vel iaculis arcu. Fusce elementum enim quis arcu
+                        posuere vulputate. Nunc vulputate risus elit, vitae mollis purus mollis id. Aenean eu nunc orci.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut non
+                        faucibus augue, id ultricies augue. Pellentesque sit amet aliquet massa, vel laoreet arcu.
+                        Aliquam faucibus sollicitudin vestibulum.
                     </Typography>
                     <br></br>
                     <Typography type="body1" component="p">
-                        As our era is in a fast and accelerated change phase in the career fields, Horizon Education
-                        recognizes it, it takes the responsibility to provide and prepare its students for any upcoming
-                        changes in the career field of choice by guiding the students, and providing high quality
-                        education related to the career field of choice.
+                        Donec laoreet blandit dui. Curabitur varius justo sit amet ex porta suscipit. Suspendisse vitae
+                        accumsan diam. Ut euismod elementum metus feugiat egestas. Curabitur ut sapien facilisis,
+                        elementum metus eu, congue metus. Suspendisse vitae dignissim urna, semper elementum odio.
+                        Maecenas turpis nibh, porta sed justo ac, interdum luctus neque. Cras lacinia leo quis justo
+                        euismod consequat.
+                    </Typography>
+                    <br></br>
+                    <Typography type="body1" component="p">
+                        Fusce elementum ac sem id laoreet. Vivamus vel sollicitudin libero. Mauris eget malesuada purus.
+                        Etiam condimentum arcu in ante
+                        maximus rutrum. Proin consectetur a odio ut sagittis. Suspendisse viverra turpis et libero
+                        facilisis scelerisque.
                     </Typography>
                     <div className={classes.root}>
                     </div>
