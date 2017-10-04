@@ -5,7 +5,8 @@ import {withStyles} from 'material-ui/styles';
 import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-
+import {Button, Grid} from "../../node_modules/material-ui/index";
+import ArrowDownward from 'material-ui-icons/KeyboardArrowDown';
 // using CommonJS modules
 let MediaReact = require('react-media')
 const styles = theme => ({
@@ -15,6 +16,7 @@ const styles = theme => ({
         justifyContent: 'center',
         overflow: 'hidden',
         background: theme.palette.background.paper,
+
     },
     banner: {
         height: 350,
@@ -42,10 +44,33 @@ const styles = theme => ({
     },
     cards: {
         marginTop: 30,
-        marginBottom: 40,
+        marginBottom: 0,
         marginLeft: 5,
         marginRight: 5,
     },
+    bullet: {
+        display: 'inline-block',
+        margin: '0 2px',
+        transform: 'scale(0.8)',
+    },
+    title: {
+        marginBottom: 16,
+        fontSize: 14,
+        color: theme.palette.text.secondary,
+    },
+    pos: {
+        marginBottom: 12,
+        color: theme.palette.text.secondary,
+    },
+    button: {
+        margin: theme.spacing.unit,
+    },
+    buttonContent: {
+        marginTop: 20,
+        padding: 16,
+        textAlign: 'left',
+        color: theme.palette.text.secondary,
+    }
 });
 
 class Admissions extends Component {
@@ -81,7 +106,6 @@ class Admissions extends Component {
 
     render() {
         const classes = this.props.classes;
-
         return (
             <div>
                 <Paper className={classes.paper} elevation={10}>
@@ -116,17 +140,93 @@ class Admissions extends Component {
                         maximus rutrum. Proin consectetur a odio ut sagittis. Suspendisse viverra turpis et libero
                         facilisis scelerisque.
                     </Typography>
-                    <div className={classes.root}>
+                    <div className={classes.buttonContent}>
+                        <Grid container spacing={40}>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    Are the courses taken at Horizon Education transferrable to another institution?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What Certifications are included in the Program?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What is a Medical Billing and Office Procedure?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What is a Network Administrator?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What is a Medical Assistant?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What is a Criminal Justice?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    Are there any hands on practices?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    Who pays for my Certifications?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    Are these Certifications Nation-Wide Certifications?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    Where can I work after graduations?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                    What kind of compensation will I get after graduation?
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </div>
                 </Paper>
             </div>
         );
+
+        const bull = <span className={this.props.classes.bullet}>•</span>;
     }
 }
 
 Admissions.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
+    question: React.PropTypes.func,
+    answer: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Admissions);

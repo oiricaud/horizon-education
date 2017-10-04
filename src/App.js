@@ -24,7 +24,6 @@ class App extends Component {
                 <div>
                     <MySideBar>
                     </MySideBar>
-
                     <Route exact path='/'
                            render={() => <HomeView> </HomeView>}
                     />

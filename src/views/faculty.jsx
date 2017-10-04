@@ -103,6 +103,7 @@ class Admissions extends Component {
                         title="Mountains banner"
                     />
                     <div>
+                        {console.log('public url: ', process.env.PUBLIC_URL)}
                         <h1> Faculty </h1>
                     </div>
                     <Typography type="body1" component="p">
