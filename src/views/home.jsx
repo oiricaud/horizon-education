@@ -11,11 +11,7 @@ import classNames from 'classnames';
 // using CommonJS modules
 const styles = theme => ({
     root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        overflow: 'hidden',
-        background: theme.palette.background.paper,
+        backgroundColor: '#e6ecf0',
     },
     banner:{
         height: 350,

@@ -160,59 +160,60 @@ class Admissions extends Component {
                                     <ArrowDownward/>
                                 </Button>
                             </Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="primary" onClick={this.handleClickOpen}
+                                        className={classes.button}>
+                                    More
+                                    <ArrowDownward/>
+                                </Button>
+                            </Grid>
+                            {
+                                /*
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        What is a Network Administrator?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
 
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What is a Network Administrator?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        What is a Medical Assistant?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
+                               <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        What is a Criminal Justice?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        Who pays for my Certifications?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        Are these Certifications Nation-Wide Certifications?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        Where can I work after graduations?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
 
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What is a Medical Assistant?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What is a Criminal Justice?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Are there any hands on practices?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Who pays for my Certifications?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Are these Certifications Nation-Wide Certifications?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Where can I work after graduations?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What kind of compensation will I get after graduation?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
+                                <Grid item xs={12}>
+                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
+                                        What kind of compensation will I get after graduation?
+                                        <ArrowDownward/>
+                                    </Button>
+                                </Grid>
+                                */}
                         </Grid>
                     </div>
                 </Paper>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css'
 import PropTypes from 'prop-types';
+import {withStyles} from 'material-ui/styles';
 import {BrowserRouter, Route} from 'react-router-dom'
 import MySideBar from './components/sidebar.jsx';
 import HomeView from './views/home.jsx';
@@ -16,12 +17,19 @@ import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-106748981-1');
 
+const styles = theme => ({
+    root: {
+        backgroundColor: '#e6ecf0',
+    },
+});
+
 class App extends Component {
 
     render() {
+        const classes = this.props.classes;
         return (
             <BrowserRouter>
-                <div>
+                <div className={classes.root}>
                     <MySideBar>
                     </MySideBar>
                     <Route exact path='/'
@@ -67,4 +75,4 @@ App.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default (App);
+export default withStyles(styles)(App);
