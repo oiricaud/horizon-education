@@ -8,7 +8,7 @@ import {Typography} from "../../node_modules/material-ui/index";
 import Card from "../../node_modules/material-ui/Card/Card";
 import {CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
 
-let MediaReact = require('react-media')
+let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
     },

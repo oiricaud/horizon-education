@@ -9,7 +9,7 @@ import {Avatar, Grid} from "../../node_modules/material-ui/index";
 import classNames from 'classnames';
 
 // using CommonJS modules
-let MediaReact = require('react-media')
+let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         display: 'flex',

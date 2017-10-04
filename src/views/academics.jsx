@@ -10,7 +10,7 @@ import {Grid} from "../../node_modules/material-ui/index";
 import {GridList, GridListTile} from "../../node_modules/material-ui/GridList/index";
 
 // using CommonJS modules
-let MediaReact = require('react-media')
+let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         display: 'flex',

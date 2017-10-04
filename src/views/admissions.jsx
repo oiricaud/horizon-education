@@ -6,8 +6,6 @@ import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
-// using CommonJS modules
-let MediaReact = require('react-media')
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -30,58 +28,11 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     }),
-    gridList: {
-        width: 1150,
-        cellHeight: '100%',
-    },
-    quote: {
-        color: 'deepskyblue',
-        fontSize: 36,
-        margin: 50,
-        textAlign: 'left',
-    },
-    cards: {
-        marginTop: 30,
-        marginBottom: 40,
-        marginLeft: 5,
-        marginRight: 5,
-    },
 });
 
 class Admissions extends Component {
-    horizonEducationTile = [
-        {
-            img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
-            title: 'Horizon Education Logo',
-            cols: 1,
-        },
-    ];
-    studentTile = [
-        {
-            img: process.env.PUBLIC_URL + './students/student1.jpg',
-            title: 'Student 1',
-            cols: 0,
-        },
-    ];
-    groupStudentTile = [
-        {
-            img: process.env.PUBLIC_URL + './students/group-of-students.jpg',
-            title: 'Group Of Students',
-            cols: 1,
-        },
-    ];
-    handleRequestClose = () => {
-        this.setState({open: false});
-    };
-    handleChangeMultiline = event => {
-        this.setState({
-            multiline: event.target.value,
-        });
-    };
-
     render() {
         const classes = this.props.classes;
-
         return (
             <div>
                 <Paper className={classes.paper} elevation={10}>

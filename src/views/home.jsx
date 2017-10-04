@@ -16,7 +16,6 @@ const styles = theme => ({
     banner:{
         height: 350,
     },
-
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -25,7 +24,6 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     }),
-
     avatar: {
         display: 'block',
         margin: 'auto',
@@ -38,10 +36,8 @@ const styles = theme => ({
 });
 
 class Home extends Component {
-
     render() {
         const classes = this.props.classes;
-
         return(
             <div>
                 <Paper className={classes.paper} elevation={10}>
@@ -62,6 +58,7 @@ class Home extends Component {
                         from the University of Phoenix while he was working at CCC, where he achieved his Masters in
                         Information management in 2012.
                     </Typography>
+
                     <br></br>
                     <Typography type="body1" component="p">
                         He joined Computer Career Center as an Admissions Representative in 2008 where he was enrolling
@@ -74,6 +71,7 @@ class Home extends Component {
                         the job, and since 2009, he has been working as a network administrator for computer career
                         Center.
                     </Typography>
+
                     <br></br>
                     <Typography>
                         In the same year of 2009, Computer Career Center changed its name to Computer Career Center,

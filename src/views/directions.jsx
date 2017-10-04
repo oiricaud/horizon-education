@@ -13,7 +13,7 @@ const coords = {
 const params = {v: '3.exp', key: 'AIzaSyCsToWIw_h81_6izX--bdkEEkBtcPMJBWs'};
 
 // using CommonJS modules
-var MediaReact = require('react-media')
+var MediaReact = require('react-media');
 
 const styles = theme => ({
     root: {
@@ -24,8 +24,6 @@ const styles = theme => ({
     appBar: {
         height: 60,
     },
-
-
     paperSmall: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -39,7 +37,6 @@ const styles = theme => ({
         paddingBottom: 16,
         margin:10,
     },
-
     paperLarge: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -56,7 +53,6 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     },
-
     flex: {
         flex: 1,
         fontWeight: 100,

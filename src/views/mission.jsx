@@ -7,7 +7,7 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
 // using CommonJS modules
-let MediaReact = require('react-media')
+let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         display: 'flex',

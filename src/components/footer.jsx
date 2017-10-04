@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'typeface-roboto'
-import { withStyles } from 'material-ui/styles';
+import {withStyles} from 'material-ui/styles';
 
 const styles = theme => ({
     root: {
@@ -34,7 +34,7 @@ function Footer(props) {
         display: 'block',
         height: '60px',
         width: '100%',
-    }
+    };
     return (
         <div>
             <div style={phantom} />

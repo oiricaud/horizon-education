@@ -16,7 +16,7 @@ import {List} from "../../node_modules/material-ui/index";
 import LearnMore from '../components/learn-more.jsx';
 import Card from "../../node_modules/material-ui/Card/Card";
 
-let MediaReact = require('react-media')
+let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         marginTop: theme.spacing.unit * 3,
