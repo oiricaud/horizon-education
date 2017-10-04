@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css'
 import PropTypes from 'prop-types';
 import {BrowserRouter, Route} from 'react-router-dom'
-import {withStyles} from 'material-ui/styles';
 import MySideBar from './components/sidebar.jsx';
 import HomeView from './views/home.jsx';
 import AcademicsView from './views/academics.jsx';
@@ -17,64 +16,50 @@ import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-106748981-1');
 
-const styles = theme => ({
-    root: {
-        marginTop: 0,
-        width: '100%',
-        backgroundColor:'#fff',
-    },
-
-});
-
 class App extends Component {
 
     render() {
-        const classes = this.props.classes;
         return (
             <BrowserRouter>
-            <div className={classes.root}>
-                <MySideBar>
-                </MySideBar>
-                <Route exact path='/' render={() => <HomeView> </HomeView>} />
-                <Route
-                    exact
-                    path='/academics'
-                    render={() => <AcademicsView> </AcademicsView>}
-                />
-                <Route
-                    exact
-                    path='/admissions'
-                    render={() => <AdmissionsView> </AdmissionsView>}
-                />
-                <Route
-                    exact
-                    path='/directions'
-                    render={() => <DirectionsView> </DirectionsView>}
-                />
-                <Route
-                    exact
-                    path='/faculty'
-                    render={() => <FacultyView> </FacultyView>}
-                />
-                <Route
-                    exact
-                    path='/faq'
-                    render={() => <FaqView> </FaqView>}
-                />
-                <Route
-                    exact
-                    path='/finance'
-                    render={() => <FinanceView> </FinanceView>}
-                />
-                <Route
-                    exact
-                    path='/mission'
-                    render={() => <MissionView> </MissionView>}
-                />
-                <MyFooter>
-                </MyFooter>
-            </div>
-        </BrowserRouter>
+                <div>
+                    <MySideBar>
+                    </MySideBar>
+
+                    <Route exact path='/'
+                           render={() => <HomeView> </HomeView>}
+                    />
+                    <Route
+                        exact path='/academics'
+                        render={() => <AcademicsView> </AcademicsView>}
+                    />
+                    <Route
+                        exact path='/admissions'
+                        render={() => <AdmissionsView> </AdmissionsView>}
+                    />
+                    <Route
+                        exact path='/directions'
+                        render={() => <DirectionsView> </DirectionsView>}
+                    />
+                    <Route
+                        exact path='/faculty'
+                        render={() => <FacultyView> </FacultyView>}
+                    />
+                    <Route
+                        exact path='/faq'
+                        render={() => <FaqView> </FaqView>}
+                    />
+                    <Route
+                        exact path='/finance'
+                        render={() => <FinanceView> </FinanceView>}
+                    />
+                    <Route
+                        exact path='/mission'
+                        render={() => <MissionView> </MissionView>}
+                    />
+                    <MyFooter>
+                    </MyFooter>
+                </div>
+            </BrowserRouter>
         );
     }
 }
@@ -83,4 +68,4 @@ App.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(App);
+export default (App);
