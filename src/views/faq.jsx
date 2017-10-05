@@ -48,6 +48,18 @@ let Questions = React.createClass({
             "Where can I work after graduations?",
             "What kind of compensation will I get after graduation?"];
 
+        var answers = ["Are the courses taken at Horizon Education transferable to another institution?",
+            "Are the courses taken at Horizon Education transferable to another institution?",
+            "What Certifications are included in the Program?",
+            "What is a Medical Billing and Office Procedure?",
+            "What is a Network Administrator?",
+            "What is a Medical Assistant?",
+            "What is a Criminal Justice?",
+            "Who pays for my Certifications?",
+            "Are these Certifications Nation-Wide Certifications?",
+            "Where can I work after graduations?",
+            "What kind of compensation will I get after graduation?"];
+
         return (
             <div>
                 {questions.map(function (questions, index) {
@@ -60,13 +72,12 @@ let Questions = React.createClass({
                             <Grid item xs={12}>
                                 <Button raised color="accent">
                                     {questions}
+                                    <ArrowDownward/>
                                 </Button>
-                                <ArrowDownward/>
                             </Grid>
                         </div>
                     )
                 })}
-
             </div>
         );
     }
