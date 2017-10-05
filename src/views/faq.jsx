@@ -30,37 +30,49 @@ const styles = theme => ({
         fontSize: 14,
         color: theme.palette.text.secondary,
     },
-    button: {
-        margin: theme.spacing.unit,
-    },
-    buttonContent: {
-        marginTop: 20,
-        padding: 16,
-        textAlign: 'left',
-        color: theme.palette.text.secondary,
-    }
 });
-var Search = React.createClass({
-    getInitialState: function () {
-        return {showResults: false};
-    },
-    onClick: function () {
-        this.setState({showResults: true});
-    },
+
+
+let Questions = React.createClass({
     render: function () {
+        const classes = this.props.classes;
+        var questions = ["Are the courses taken at Horizon Education transferable to another institution?",
+            "Are the courses taken at Horizon Education transferable to another institution?",
+            "What Certifications are included in the Program?",
+            "What is a Medical Billing and Office Procedure?",
+            "What is a Network Administrator?",
+            "What is a Medical Assistant?",
+            "What is a Criminal Justice?",
+            "Who pays for my Certifications?",
+            "Are these Certifications Nation-Wide Certifications?",
+            "Where can I work after graduations?",
+            "What kind of compensation will I get after graduation?"];
+
         return (
             <div>
-                <Button raised color="primary" onClick={this.onClick}>
-                    <ArrowDownward/>
-                    More
-                </Button>
+                {questions.map(function (questions, index) {
+                    return (
+                        <div style={{
+                            marginTop: 20,
+                            padding: 16,
+                            textAlign: 'left'
+                        }}>
+                            <Grid item xs={12}>
+                                <Button raised color="accent">
+                                    {questions}
+                                </Button>
+                                <ArrowDownward/>
+                            </Grid>
+                        </div>
+                    )
+                })}
 
-                {this.state.showResults ? <Results/> : null}
             </div>
         );
     }
 });
-var Results = React.createClass({
+
+let Results = React.createClass({
     render: function () {
         return (
             <div>
@@ -74,8 +86,28 @@ var Results = React.createClass({
         );
     }
 });
-class Faq extends Component {
 
+let More = React.createClass({
+    getInitialState: function () {
+        return {showResults: false};
+    },
+    onClick: function () {
+        this.setState({showResults: true});
+    },
+    render: function () {
+        return (
+            <div>
+                <Button raised color="primary" onClick={this.onClick}>
+                    <ArrowDownward/>
+                    More
+                </Button>
+                {this.state.showResults ? <Results/> : null}
+            </div>
+        );
+    }
+});
+
+class Faq extends Component {
     render() {
         const classes = this.props.classes;
         return (
@@ -114,74 +146,10 @@ class Faq extends Component {
                     </Typography>
                     <div className={classes.buttonContent}>
                         <Grid container spacing={40}>
+                            <Questions/>
                             <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Are the courses taken at Horizon Education transferable to another institution?
-                                    <ArrowDownward/>
-                                </Button>
+                                <More/>
                             </Grid>
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What Certifications are included in the Program?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    What is a Medical Billing and Office Procedure?
-                                    <ArrowDownward/>
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Search/>
-                            </Grid>
-                            {
-                                /*
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        What is a Network Administrator?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        What is a Medical Assistant?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-                               <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        What is a Criminal Justice?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        Who pays for my Certifications?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        Are these Certifications Nation-Wide Certifications?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        Where can I work after graduations?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-
-                                <Grid item xs={12}>
-                                    <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                        What kind of compensation will I get after graduation?
-                                        <ArrowDownward/>
-                                    </Button>
-                                </Grid>
-                                */}
                         </Grid>
                     </div>
                 </Paper>
