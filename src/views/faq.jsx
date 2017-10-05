@@ -40,8 +40,42 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     }
 });
+var Search = React.createClass({
+    getInitialState: function () {
+        return {showResults: false};
+    },
+    onClick: function () {
+        this.setState({showResults: true});
+    },
+    render: function () {
+        return (
+            <div>
+                <Button raised color="primary" onClick={this.onClick}>
+                    <ArrowDownward/>
+                    More
+                </Button>
 
+                {this.state.showResults ? <Results/> : null}
+            </div>
+        );
+    }
+});
+var Results = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <Typography type="body1" component="p">
+                    Fusce elementum ac sem id laoreet. Vivamus vel sollicitudin libero. Mauris eget malesuada purus.
+                    Etiam condimentum arcu in ante
+                    maximus rutrum. Proin consectetur a odio ut sagittis. Suspendisse viverra turpis et libero
+                    facilisis scelerisque.
+                </Typography>
+            </div>
+        );
+    }
+});
 class Faq extends Component {
+
     render() {
         const classes = this.props.classes;
         return (
@@ -82,7 +116,7 @@ class Faq extends Component {
                         <Grid container spacing={40}>
                             <Grid item xs={12}>
                                 <Button raised color="accent" onClick={this.handleClickOpen} className={classes.button}>
-                                    Are the courses taken at Horizon Education transferrable to another institution?
+                                    Are the courses taken at Horizon Education transferable to another institution?
                                     <ArrowDownward/>
                                 </Button>
                             </Grid>
@@ -99,11 +133,7 @@ class Faq extends Component {
                                 </Button>
                             </Grid>
                             <Grid item xs={12}>
-                                <Button raised color="primary" onClick={this.handleClickOpen}
-                                        className={classes.button}>
-                                    More
-                                    <ArrowDownward/>
-                                </Button>
+                                <Search/>
                             </Grid>
                             {
                                 /*
@@ -157,8 +187,6 @@ class Faq extends Component {
                 </Paper>
             </div>
         );
-
-        const bull = <span className={this.props.classes.bullet}>•</span>;
     }
 }
 
