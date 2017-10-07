@@ -159,7 +159,7 @@ class Faq extends Component {
                         facilisis scelerisque.
                     </Typography>
                     {questions.map(function (questions, index) {
-                        return ( <ButtonQuestions question={questions} answer={answers[index]}/> )
+                        return ( <ButtonQuestions question={questions} answer={answers[index]} key={index}/> )
                     })}
                 </Paper>
             </div>

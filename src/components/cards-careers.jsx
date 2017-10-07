@@ -84,14 +84,14 @@ class Careers extends React.Component {
                                 <CardContent
                                     className={classes.content}>
                                     <Typography type="headline" component="h2"> {this.props.title} </Typography>
-                                    <Typography component="p" customLength={2}> {shorterInfo(this.props.info) + '...'} </Typography>
+                                    <Typography component="p"> {shorterInfo(this.props.info) + '...'} </Typography>
                                 </CardContent>
                             ) : (
                             <div>
                                 <CardContent
                                     className={classes.content}>
                                     <Typography type="headline" component="h2"> {this.props.title} </Typography>
-                                    <Typography component="p" customLength={2}> {shortInfo(this.props.info) + '...'} </Typography>
+                                    <Typography component="p"> {shortInfo(this.props.info) + '...'} </Typography>
                                 </CardContent>
                             </div>
                             )}
