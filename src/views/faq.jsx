@@ -102,7 +102,8 @@ class Faq extends Component {
         const classes = this.props.classes;
 
         const questions =
-            ["What is a Network Administrator?",
+            [
+                "What is a Network Administrator?",
                 "What is a Medical Assistant?",
                 "What is a Medical Billing & Office Procedure",
                 "What is a Criminal Justice?",
@@ -131,7 +132,7 @@ class Faq extends Component {
                 "What Certifications are included in the Program?",
 
                 "What kind of degree or Diploma shall I receive from Horizon Education after graduation? ",
-                "Are the courses taken at Horizon Education transferable to another institution?",
+
                 "Where can I work after graduation?"
 
             ];
@@ -154,12 +155,9 @@ class Faq extends Component {
                 "2.5 Weeks",
                 "2 Months",
 
-                "Network Administrator\n" +
-                "The course is 50/50, what that means is 50% hands on practices, and 50% reading, writing, exams, homework, lecture, etc… \n" +
-                "Medical Assistant\n" +
-                "The course is 65/35, what that means is 35% hands on practices, and 65% reading, writing, exams, homework, lecture, etc… \n" +
-                "Medical Billing and Office Procedures\n" +
-                "The course is 65/35, what that means is 35% hands on practices, and 65% reading, writing, exams, homework, lecture, etc… \n" +
+                "Network Administrator - The course is 50/50, what that means is 50% hands on practices, and 50% reading, writing, exams, homework, lecture, etc… \n" +
+                "Medical Assistant -The course is 65/35, what that means is 35% hands on practices, and 65% reading, writing, exams, homework, lecture, etc… \n" +
+                "Medical Billing and Office Procedures\n  The course is 65/35, what that means is 35% hands on practices, and 65% reading, writing, exams, homework, lecture, etc… \n" +
                 "No hands on for Criminal Justice",
 
                 "The Network Administrator (IT) diploma program is designed to prepare students for entry level" +
@@ -177,8 +175,8 @@ class Faq extends Component {
 
                 "This course gives a general overview of the legal system and the role of the paralegal within the system with regard to structure of the court system, administrative agencies, private law firm, and the public sector.",
 
-                "Upon satisfactory completion of all courses in a student’s program, Diplomas are awarded. Only successful completion of the all requirements for graduation are met, is when a Diploma will be issued and will record of graduation from a program be posted to a student’s academic record. Only under certain circumstances a certificate of completion indicating certain amount of credit hours earned will be awarded if a student does not complete the necessary credit or courses for graduation.",
-                "Credit transferred to other schools is left to the discretion of the institute. Contacting the" +
+                "Upon satisfactory completion of all courses in a student’s program, Diplomas are awarded. Only" +
+                " successful completion of the all requirements for graduation are met, is when a Diploma will be issued and will record of graduation from a program be posted to a student’s academic record. Only under certain circumstances a certificate of completion indicating certain amount of credit hours earned will be awarded if a student does not complete the necessary credit or courses for graduation. Credit transferred to other schools is left to the discretion of the institute. Contacting the" +
                 " school that the student is planning to attend are urged to contact that school first. Some schools may or may not accept Horizon Education credits.",
 
                 "NETWORK ADMINISTRATOR (IT)\n" +
