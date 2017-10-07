@@ -60,7 +60,7 @@ const styles = theme => ({
     },
 });
 
-class Admissions extends Component {
+class Faculty extends Component {
     horizonEducationTile = [
         {
             img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
@@ -280,8 +280,8 @@ class Admissions extends Component {
     }
 }
 
-Admissions.propTypes = {
+Faculty.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Admissions);
+export default withStyles(styles)(Faculty);

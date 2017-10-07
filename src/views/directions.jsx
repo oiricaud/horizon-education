@@ -20,10 +20,6 @@ const styles = theme => ({
         flexGrow: 1,
         marginTop: 30,
     },
-
-    appBar: {
-        height: 60,
-    },
     paperSmall: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -52,11 +48,6 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit * 3,
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
-    },
-    flex: {
-        flex: 1,
-        fontWeight: 100,
-        margin: 20,
     },
     header:{
         fontWeight: 300,
@@ -127,7 +118,6 @@ class Directions extends Component {
                     ) : (
                         <div>
                             <Paper className={classes.paperLarge} elevation={10}>
-
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>

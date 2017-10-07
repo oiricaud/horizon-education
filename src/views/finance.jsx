@@ -28,7 +28,7 @@ const styles = theme => ({
     }),
 });
 
-class Admissions extends Component {
+class Finance extends Component {
     render() {
         const classes = this.props.classes;
 
@@ -72,8 +72,8 @@ class Admissions extends Component {
     }
 }
 
-Admissions.propTypes = {
+Finance.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Admissions);
+export default withStyles(styles)(Finance);
