@@ -96,9 +96,6 @@ class LearnMore extends React.Component {
 
 LearnMore.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
-    info: React.PropTypes.func,
-    image: React.PropTypes.func,
 };
 
 export default withStyles(styles)(LearnMore);

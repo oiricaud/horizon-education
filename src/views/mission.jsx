@@ -7,7 +7,6 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
 // using CommonJS modules
-let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -118,7 +117,6 @@ class Admissions extends Component {
 
 Admissions.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Admissions);

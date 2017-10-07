@@ -5,9 +5,7 @@ import {withStyles} from 'material-ui/styles';
 import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-import {Button, Grid} from "../../node_modules/material-ui/index";
-import QuestionsAndAnswers from '../components/answers.jsx';
-import ArrowDownward from 'material-ui-icons/KeyboardArrowDown';
+import ButtonQuestions from '../components/button-questions.jsx';
 
 const styles = theme => ({
     banner: {
@@ -21,86 +19,15 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     }),
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        marginBottom: 16,
-        fontSize: 14,
-        color: theme.palette.text.secondary,
-    },
 });
 
-let Results = React.createClass({
-    handleClickOpen: function (key, index) {
-        console.log(key);
-        console.log(index);
-        this.setState(
-            {
-                open: true,
-                question: key,
-                id: index
-            },
-        );
-    },
-    handleRequestClose: function () {
-        this.setState(
-            {open: false}
-        );
-    },
-    render: function () {
-        const questions =
-            ["What is a Criminal Justice?",
-                "Who pays for my Certifications?",
-                "Are these Certifications Nation-Wide Certifications?",
-                "Where can I work after graduations?",
-                "What kind of compensation will I get after graduation?"];
-        return (
-            <div>
-                <Button onClick={this.handleClickOpen} raised color="accent" style={{
-                    marginTop: 20, marginBottom: 20,
-                    padding: 16,
-                    textAlign: 'left'
-                }}>
-                    {questions[0]}
-                    <ArrowDownward/>
-                </Button>
-            </div>
-        );
-    }
-});
-
-let More = React.createClass({
-    getInitialState: function () {
-        return {showResults: false};
-    },
-    onClick: function () {
-        this.setState({showResults: true});
-    },
-    render: function () {
-        return (
-            <div>
-                {this.state.showResults ? <Results/> : null}
-                <Button raised color="primary" onClick={this.onClick}>
-                    <ArrowDownward/>
-                    More
-                </Button>
-            </div>
-        );
-    }
-});
 class Faq extends Component {
     constructor(props) {
         super(props);
         this.state = {open: false};
     }
-
     render() {
-
         const classes = this.props.classes;
-
         const questions =
             [
                 "What is a Network Administrator?",
@@ -134,9 +61,7 @@ class Faq extends Component {
                 "What kind of degree or Diploma shall I receive from Horizon Education after graduation? ",
 
                 "Where can I work after graduation?"
-
             ];
-
         const answers =
             [
                 "The Network Administrator (IT) diploma program is designed to prepare students for entry level employment in the IT field. The program prepares students with the skills and knowledge needed to set-up, maintain, troubleshoot, and repair computers and small computer networks. Graduates will leave the program with the hands-on experience, customer service skills, and A+ & Net+ certifications expected by today’s employers. The Information Technology diploma program prepares graduates for positions such Help Desk Analyst, Customer Support Representative, Technical Support Specialist, Network Installer, and Field Service Technician. Upon completion of this program a Diploma is awarded",
@@ -199,7 +124,6 @@ class Faq extends Component {
                 "This course will cover the anatomy and physiology of the cardiovascular system and address the legal and ethical issues associated with being a Phlebotomist. Students will be trained to perform a variety of blood collection methods using proper techniques and precautions including: vacuum collection devices, syringes, capillary skin puncture, butterfly needles, and blood cultures specimen collection on adults, children and infants. Emphasis will be placed on infection prevention; proper patient identification; proper labeling, handling, processing, and accessioning of specimens; quality assurance.\n" +
                 "PARALEGAL CERTIFICATION (SEMINAR) This course gives a general overview of the legal system and the role of the paralegal within the system with regard to structure of the court system, administrative agencies, private law firm, and the public sector."
             ];
-
         return (
             <div>
                 <Paper className={classes.paper} elevation={10}>
@@ -235,17 +159,8 @@ class Faq extends Component {
                         facilisis scelerisque.
                     </Typography>
                     {questions.map(function (questions, index) {
-                        return (
-                            <QuestionsAndAnswers question={questions} answer={answers[index]}/>
-                        )
+                        return ( <ButtonQuestions question={questions} answer={answers[index]}/> )
                     })}
-
-                    <Grid item xs={12} style={{
-                        marginTop: 20,
-                        textAlign: 'left'
-                    }}>
-                        <More/>
-                    </Grid>
                 </Paper>
             </div>
         );
@@ -255,5 +170,4 @@ class Faq extends Component {
 Faq.propTypes = {
     classes: PropTypes.object.isRequired,
 };
-
 export default withStyles(styles)(Faq);

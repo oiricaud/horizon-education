@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import {withStyles} from 'material-ui/styles';
 import Card, {CardMedia} from 'material-ui/Card';
 import {NavLink} from 'react-router-dom'
@@ -61,7 +61,6 @@ TabContainer.propTypes = {
 
 class SideBarItem extends Component {
     state = {
-        value: 0,
         open: {
             top: false,
             left: false,
@@ -69,9 +68,6 @@ class SideBarItem extends Component {
             right: false,
         },
         expanded: false
-    };
-    handleChange = (event, value) => {
-        this.setState({ value });
     };
     toggleDrawer = (side, open) => {
         const drawerState = {};
@@ -88,7 +84,6 @@ class SideBarItem extends Component {
 
     render(){
         const classes = this.props.classes;
-        const { value } = this.state;
 
         const mailFolderListItems = (
             <div>
@@ -211,17 +206,6 @@ class SideBarItem extends Component {
             </div>
         );
 
-        const fullList = (
-            <div>
-                <List className={classes.listFull} disablePadding>
-                    {mailFolderListItems}
-                </List>
-                <Divider />
-                <List className={classes.listFull} disablePadding>
-                    {otherMailFolderListItems}
-                </List>
-            </div>
-        );
         return (
             <div className={classes.root}>
                 <Toolbar>
@@ -246,8 +230,6 @@ class SideBarItem extends Component {
 
 SideBarItem.propTypes = {
     classes: PropTypes.object.isRequired,
-    children: PropTypes.node.isRequired,
-
 };
 
 export default withStyles(styles)(SideBarItem);

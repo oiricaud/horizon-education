@@ -282,7 +282,6 @@ class Admissions extends Component {
 
 Admissions.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Admissions);

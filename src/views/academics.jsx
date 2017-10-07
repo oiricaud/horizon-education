@@ -232,7 +232,6 @@ class Academics extends Component {
 
 Academics.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Academics);

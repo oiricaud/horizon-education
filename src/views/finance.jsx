@@ -7,7 +7,6 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
 // using CommonJS modules
-let MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -19,7 +18,6 @@ const styles = theme => ({
     banner: {
         height: 350,
     },
-
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
@@ -28,7 +26,6 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3,
     }),
-
 });
 
 class Admissions extends Component {
@@ -77,7 +74,6 @@ class Admissions extends Component {
 
 Admissions.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: React.PropTypes.func,
 };
 
 export default withStyles(styles)(Admissions);
