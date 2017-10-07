@@ -3,7 +3,7 @@ import './App.css'
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import {BrowserRouter, Route} from 'react-router-dom'
-import MySideBar from './components/sidebar.jsx';
+import NavigationSideBar from './components/sidebar.jsx';
 import HomeView from './views/home.jsx';
 import AcademicsView from './views/academics.jsx';
 import AdmissionsView from './views/admissions.jsx';
@@ -29,8 +29,8 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className={classes.root}>
-                    <MySideBar>
-                    </MySideBar>
+                    <NavigationSideBar>
+                    </NavigationSideBar>
                     <Route exact path='/'
                            render={() => <HomeView> </HomeView>}
                     />
