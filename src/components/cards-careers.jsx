@@ -97,7 +97,7 @@ class Careers extends React.Component {
                             )}
                     </MediaReact>
                         <CardActions>
-                            <Button  dense color="primary"  onClick={this.handleClickOpen}>
+                            <Button dense color="primary" onClick={this.handleClickOpen}>
                                 Enroll
                             </Button>
                             <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
@@ -147,7 +147,6 @@ class Careers extends React.Component {
                                         type="phone"
                                         fullWidth
                                     />
-
                                 </DialogContent>
                                 <DialogActions>
                                     <Button onClick={this.handleRequestClose} color="primary">
