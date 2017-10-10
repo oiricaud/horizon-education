@@ -72,6 +72,7 @@ class Careers extends React.Component {
     };
     onEnrollClick = (e) => {
         console.log("when clicking, the form data is:");
+        this.setState({open: false});
         console.log(this.state.person);
     };
 
