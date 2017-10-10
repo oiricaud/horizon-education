@@ -51,15 +51,33 @@ const styles = theme => ({
 class Careers extends React.Component {
     state = {
         open: false,
+        person: {
+            firstName: '',
+            lastName: '',
+            address: '',
+            city: '',
+            phoneNumber: '',
+        }
     };
-
+    handleRequestClose = (e) => {
+        this.setState({open: false});
+    };
     handleClickOpen = () => {
         this.setState({ open: true });
     };
-
-    handleRequestClose = () => {
-        this.setState({ open: false });
+    handleChange = (event) => {
+        event.persist(); // allow native event access (see: https://facebook.github.io/react/docs/events.html)
+        console.log("evebt " + event.target.value);
+        this.setState((state) => state.person[event.target.name] = event.target.value);
     };
+    onEnrollClick = (e) => {
+        console.log("when clicking, the form data is:");
+        console.log(this.state.person);
+    };
+
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         const { classes } = this.props;
@@ -108,43 +126,58 @@ class Careers extends React.Component {
                                         updates occasionally.
                                     </DialogContentText>
                                     <TextField
+                                        value={this.state.firstName}
+                                        onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
                                         id="firstname"
                                         label="First Name"
-                                        type="name"
+                                        type="firstname"
+                                        name="firstName"
                                         fullWidth
                                     />
                                     <TextField
+                                        value={this.state.lastName}
+                                        onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
                                         id="lastname"
                                         label="Last Name"
-                                        type="name"
+                                        type="lastname"
+                                        name="lastName"
                                         fullWidth
                                     />
                                     <TextField
+                                        value={this.state.address}
+                                        onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
                                         id="address"
                                         label="Address"
                                         type="address"
+                                        name="address"
                                         fullWidth
                                     />
                                     <TextField
+                                        value={this.state.city}
+                                        onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
                                         id="city"
                                         label="City, State, Zip"
                                         type="city"
+                                        name="city"
                                         fullWidth
                                     />
                                     <TextField
+                                        value={this.state.phoneNumber}
+                                        onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
                                         id="phonenumber"
                                         label="Phone Number"
                                         type="phone"
+                                        name="phoneNumber"
                                         fullWidth
                                     />
                                 </DialogContent>
@@ -152,9 +185,10 @@ class Careers extends React.Component {
                                     <Button onClick={this.handleRequestClose} color="primary">
                                         Cancel
                                     </Button>
-                                    <Button onClick={this.handleRequestClose} color="primary">
+                                    <Button onClick={this.onEnrollClick} color="primary">
                                         Enroll
                                     </Button>
+
                                 </DialogActions>
                             </Dialog>
                             <LearnMore
