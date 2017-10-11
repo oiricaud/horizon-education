@@ -14,6 +14,7 @@ import {
 } from "../../node_modules/material-ui/Dialog/index";
 import LearnMore from '../components/learn-more.jsx';
 import Card from "../../node_modules/material-ui/Card/Card";
+import {auth} from '../helpers/auth'
 
 let MediaReact = require('react-media');
 const styles = theme => ({
@@ -48,12 +49,18 @@ const styles = theme => ({
     },
 });
 
+function setErrorMsg(error) {
+    return {
+        registerError: error.message
+    }
+}
 class Careers extends React.Component {
     state = {
         open: false,
+        registerError: null,
         person: {
-            firstName: '',
-            lastName: '',
+            name: '',
+            email: '',
             address: '',
             city: '',
             phoneNumber: '',
@@ -67,13 +74,14 @@ class Careers extends React.Component {
     };
     handleChange = (event) => {
         event.persist(); // allow native event access (see: https://facebook.github.io/react/docs/events.html)
-        console.log("evebt " + event.target.value);
         this.setState((state) => state.person[event.target.name] = event.target.value);
     };
     onEnrollClick = (e) => {
+        e.preventDefault();
+        auth(this.state.person);
         console.log("when clicking, the form data is:");
-        this.setState({open: false});
         console.log(this.state.person);
+        this.setState({open: false});
     };
 
     constructor(props) {
@@ -127,25 +135,25 @@ class Careers extends React.Component {
                                         updates occasionally.
                                     </DialogContentText>
                                     <TextField
-                                        value={this.state.firstName}
+                                        value={this.state.name}
                                         onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
-                                        id="firstname"
-                                        label="First Name"
-                                        type="firstname"
-                                        name="firstName"
+                                        id="name"
+                                        label="First Last Name"
+                                        type="name"
+                                        name="name"
                                         fullWidth
                                     />
                                     <TextField
-                                        value={this.state.lastName}
+                                        value={this.state.email}
                                         onChange={this.handleChange}
                                         autoFocus
                                         margin="dense"
-                                        id="lastname"
-                                        label="Last Name"
-                                        type="lastname"
-                                        name="lastName"
+                                        id="email"
+                                        label="Email"
+                                        type="email"
+                                        name="email"
                                         fullWidth
                                     />
                                     <TextField
@@ -182,6 +190,15 @@ class Careers extends React.Component {
                                         fullWidth
                                     />
                                 </DialogContent>
+                                {
+                                    this.state.registerError &&
+                                    <div className="alert alert-danger" role="alert">
+                                        <span className="glyphicon glyphicon-exclamation-sign"
+                                              aria-hidden="true"></span>
+                                        <span className="sr-only">Error:</span>
+                                        &nbsp;{this.state.registerError}
+                                    </div>
+                                }
                                 <DialogActions>
                                     <Button onClick={this.handleRequestClose} color="primary">
                                         Cancel
