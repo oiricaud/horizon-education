@@ -6,8 +6,8 @@ import {Paper, Typography} from "../../node_modules/material-ui/index";
 import {Circle, Gmaps, InfoWindow, Marker} from 'react-gmaps';
 
 const coords = {
-    lat: 31.6822916,
-    lng: -106.1845318
+    lat: 31.7526061,
+    lng: -106.30257210000002
 };
 
 const params = {v: '3.exp', key: 'AIzaSyCsToWIw_h81_6izX--bdkEEkBtcPMJBWs'};
@@ -18,13 +18,12 @@ var MediaReact = require('react-media');
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        marginTop: 30,
     },
     paperSmall: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 12,
         marginLeft: theme.spacing.unit * 2,
         marginRight: theme.spacing.unit * 2,
     }),
@@ -36,10 +35,10 @@ const styles = theme => ({
     paperLarge: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
-        marginTop: theme.spacing.unit * 10,
-        marginBottom: theme.spacing.unit * 10,
-        marginLeft: theme.spacing.unit * 10,
-        marginRight: theme.spacing.unit * 10,
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 12,
+        marginLeft: theme.spacing.unit * 2,
+        marginRight: theme.spacing.unit * 2,
     }),
     hoursLarge:{
         paddingTop: 8,

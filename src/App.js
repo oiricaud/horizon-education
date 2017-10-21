@@ -10,7 +10,6 @@ import AdmissionsView from './views/admissions.jsx';
 import DirectionsView from './views/directions.jsx';
 import FacultyView from './views/faculty.jsx';
 import FaqView from './views/faq.jsx';
-import FinanceView from './views/finance.jsx';
 import MissionView from './views/mission.jsx';
 import MyFooter from './components/footer.jsx';
 import ReactGA from 'react-ga';
@@ -53,10 +52,6 @@ class App extends Component {
                     <Route
                         exact path='/faq'
                         render={() => <FaqView> </FaqView>}
-                    />
-                    <Route
-                        exact path='/finance'
-                        render={() => <FinanceView> </FinanceView>}
                     />
                     <Route
                         exact path='/mission'

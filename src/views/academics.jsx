@@ -118,17 +118,8 @@ class Academics extends Component {
                                     <CareerCards
                                         title={'Network Administrator (IT)'}
                                         image={process.env.PUBLIC_URL + './students/network-admin.jpg'}
-                                        info={'The Network Administrator (IT) diploma program is designed to ' +
-                                        'prepare students for entry level employment in the IT field. The program' +
-                                        ' prepares students with the skills and knowledge needed to set-up, ' +
-                                        'maintain, troubleshoot, and repair computers and small computer' +
-                                        ' networks. Graduates will leave the program with the hands-on ' +
-                                        'experience, customer service skills, and A+ & Net+ certifications ' +
-                                        'expected by today’s employers. The Information Technology diploma ' +
-                                        'program prepares graduates for positions such Help Desk Analyst, ' +
-                                        'Customer Support Representative, Technical Support Specialist, ' +
-                                        'Network Installer, and Field Service Technician. Upon completion' +
-                                        ' of this program a Diploma is awarded.'}
+                                        info={'The Information Technology Diploma in the Network Administration Program, is awarded to students who are prepared for an entry level employment in the technology field. The Network Administrator Program prepares students to maintain, troubleshoot, setup a network, also it provides the skills and knowledge needed to manage a small network upon the completion of the program.\n' +
+                                        'A combination of having A+, and Net+ Certifications upon graduation, also some of the Hands on skills that the program provides to graduates are Help Desk Technician, Network Administration, Technical Support, and Field Support Technician, increase the marketability of the students, and may increase the hire possibility.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -136,7 +127,7 @@ class Academics extends Component {
                                     <CareerCards
                                         title={'Medical Billing & Office Procedures'}
                                         image={process.env.PUBLIC_URL + './students/medical-bill.jpg'}
-                                        info={'The Medical Insurance Billing and Coding diploma program focuses on procedural knowledge of industry practices and close attention to details. The program includes instruction in the basic concepts and procedures necessary to perform the tasks associated with filling out health insurance forms, coding medical practice procedures, and medical terminology. Medical Insurance Billing and Coding (MIBC) professionals perform a variety of administrative health information functions, including those associated with organizing, analyzing, and technically evaluating health insurance claim forms and coding diseases, surgeries, medical procedures, and other therapies for billing. Graduates from the program may seek employment in hospitals, urgent care facilities, clinics, insurance companies, home healthcare agencies, and pharmaceutical companies. The program prepares individuals to work as medical insurance billing and coding clerks. Upon completion of the program, students will receive a Diploma.'}
+                                        info={'The students in the Medical Billing and Office Procedures Diploma Program will learn the procedural knowledge Medical Billing and coding. Paying attention to details when filling insurance forms, and dealing with related tasks associated with special Medical coding for a doctor’s offices and Hospitals. As a Medical Billing and Office Procedures student, learning the professional administrative health functions becomes a main skill in the medical field of Medical Billing and Office Procedures. Graduates may found jobs at the hospitals, insurance companies, home healthcare and clinics. Medical Billing and Office Procedures clerk, may work in the administration at the front office, or may help with any clinical laboratory dealing with patients.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -146,16 +137,15 @@ class Academics extends Component {
                                     <CareerCards
                                         title={'Medical Assistant'}
                                         image={process.env.PUBLIC_URL + './students/medical-assistant.jpg'}
-                                        info={'The Medical Assisting diploma program is designed to provide students with an understanding of the medical office environment and administering to the needs of both patients and doctors. Students will have opportunities to study and learn about administrative, clinical, and laboratory procedures; phlebotomy; EKG procedures; medical terminology; anatomy and physiology; record keeping; insurance billing; and pharmacology. Job-seeking techniques and interpersonal skills are also addressed. Graduates of the Medical Assisting program will be prepared to seek employment in doctors’ offices, hospitals, and related businesses. Upon completion of the program, a Diploma is rewarded.'}
+                                        info={'Students that complete the Medical Assisting Diploma Program may have better understanding of both the Medical Office terminology, record keeping, and clinical laboratory environment and procedures. The skills provided by the program may help the students with Phlebotomy technician skills procedures, EKG procedures. The employment opportunity maybe available in Doctors’ offices, Hospitals and Clinics.'}
                                     >
                                     </CareerCards>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <CareerCards
                                         title={'Paralegal'}
-
                                         image={process.env.PUBLIC_URL + './students/paralegal.jpg'}
-                                        info={'This course gives a general overview of the legal system and the role of the paralegal within the system with regard to structure of the court system, administrative agencies, private law firm, and the public sector.'}
+                                        info={'This is a certification program that prepares the certified paralegal associates to have an overview of the legal system, and a better understanding of the court system. Working with lawyers and private law firms for the public sectors.'}
                                     >
                                     </CareerCards>
                                 </Grid>
@@ -173,7 +163,7 @@ class Academics extends Component {
                                     <CareerCards
                                         title={'Phlebotomy'}
                                         image={process.env.PUBLIC_URL + './students/phelebotomy.jpg'}
-                                        info={'This course will cover the anatomy and physiology of the cardiovascular system and address the legal and ethical issues associated with being a Phlebotomist. Students will be trained to perform a variety of blood collection methods using proper techniques and precautions including: vacuum collection devices, syringes, capillary skin puncture, butterfly needles, and blood cultures specimen collection on adults, children and infants. Emphasis will be placed on infection prevention; proper patient identification; proper labeling, handling, processing, and accessioning of specimens; quality assurance.'}
+                                        info={'course prepares the students to work with variety of devices to accomplish many tasks of blood collection process and procedures. Working with the anatomy and physiology of human cardiovascular system, prepares the students to address the legal and ethical issues associated with Phlebotomist. Learning all about the infection prevention, and prepare labeling, for accessioning of specimens and quality assurance. Some of the skills that the students accomplish along the course are working with vacuum collection devices, butterfly needles, also blood cultures specimen collection on adults and children, and infants.'}
                                     >
                                     </CareerCards>
                                 </Grid>

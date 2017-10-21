@@ -12,13 +12,22 @@ import DirectionsIcon from 'material-ui-icons/Directions';
 import StarIcon from 'material-ui-icons/Star';
 import PersonIcon from 'material-ui-icons/Person';
 import FaqIcon from 'material-ui-icons/QuestionAnswer';
-import MoneyIcon from 'material-ui-icons/AttachMoney';
 import HomeIcon from 'material-ui-icons/Home';
 import ComputerIcon from 'material-ui-icons/Computer';
 import Toolbar from 'material-ui/Toolbar';
 import MenuIcon from 'material-ui-icons/Menu';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
+import {Button, Dialog} from "../../node_modules/material-ui/index";
+import {add} from '../helpers/auth'
+
+import {
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle
+} from "../../node_modules/material-ui/Dialog/index";
+import TextField from "../../node_modules/material-ui/TextField/TextField";
 
 const styles = theme => ({
     root: {
@@ -43,7 +52,8 @@ const styles = theme => ({
     },
     flex: {
         flex: 1,
-        color:'white'
+        color: 'white',
+        fontWeight: 'normal'
     },
     logoImage:{
         img: process.env.PUBLIC_URL + './icons/horizon-education.jpg',
@@ -59,6 +69,11 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+function setErrorMsg(error) {
+    return {
+        registerError: error.message
+    }
+}
 class SideBarItem extends Component {
     state = {
         open: {
@@ -67,12 +82,40 @@ class SideBarItem extends Component {
             bottom: false,
             right: false,
         },
+        openButton: false,
+        person: {
+            name: '',
+            email: '',
+            address: '',
+            city: '',
+            phoneNumber: '',
+        },
+        registerError: null,
         expanded: false
     };
+    handleRequestClose = (e) => {
+        this.setState({openButton: false});
+    };
+    handleClickOpen = () => {
+        this.setState({openButton: true});
+    };
+
+    onEnrollClick = (e) => {
+        e.preventDefault();
+        console.log("when clicking, the form data is:");
+        console.log(this.state.person);
+        add(this.state.person);
+        this.setState({openButton: false});
+    };
+
     toggleDrawer = (side, open) => {
         const drawerState = {};
         drawerState[side] = open;
         this.setState({ open: drawerState });
+    };
+    handleChange = (event) => {
+        event.persist(); // allow native event access (see: https://facebook.github.io/react/docs/events.html)
+        this.setState((state) => state.person[event.target.name] = event.target.value);
     };
     handleExpandClick = () => {
         this.setState({ expanded: !this.state.expanded });
@@ -160,17 +203,6 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
-                <NavLink activeClassName='active' exact to='finance'>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <MoneyIcon />
-                        </ListItemIcon>
-                        <div className={classes.sidebar}>
-                            Finance
-                        </div>
-                    </ListItem>
-                </NavLink>
-
                 <NavLink activeClassName='active' exact to='mission'>
                     <ListItem button>
                         <ListItemIcon>
@@ -221,6 +253,89 @@ class SideBarItem extends Component {
                     <Typography type="title" className={classes.flex}>
                         Horizon Education
                     </Typography>
+                    <Button color="contrast" onClick={this.handleClickOpen}>Apply</Button>
+                    <Dialog open={this.state.openButton} onRequestClose={this.handleRequestClose}>
+                        <DialogTitle>{'Enroll'}</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>
+                                To subscribe to our newsletter, please enter your information here. We will send
+                                updates occasionally.
+                            </DialogContentText>
+                            <TextField
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                                autoFocus
+                                margin="dense"
+                                id="name"
+                                label="First Last Name"
+                                type="name"
+                                name="name"
+                                fullWidth
+                            />
+                            <TextField
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                autoFocus
+                                margin="dense"
+                                id="email"
+                                label="Email"
+                                type="email"
+                                name="email"
+                                fullWidth
+                            />
+                            <TextField
+                                value={this.state.address}
+                                onChange={this.handleChange}
+                                autoFocus
+                                margin="dense"
+                                id="address"
+                                label="Address"
+                                type="address"
+                                name="address"
+                                fullWidth
+                            />
+                            <TextField
+                                value={this.state.city}
+                                onChange={this.handleChange}
+                                autoFocus
+                                margin="dense"
+                                id="city"
+                                label="City, State, Zip"
+                                type="city"
+                                name="city"
+                                fullWidth
+                            />
+                            <TextField
+                                value={this.state.phoneNumber}
+                                onChange={this.handleChange}
+                                autoFocus
+                                margin="dense"
+                                id="phonenumber"
+                                label="Phone Number"
+                                type="phone"
+                                name="phoneNumber"
+                                fullWidth
+                            />
+                        </DialogContent>
+                        {
+                            this.state.registerError &&
+                            <div className="alert alert-danger" role="alert">
+                                        <span className="glyphicon glyphicon-exclamation-sign"
+                                              aria-hidden="true"></span>
+                                <span className="sr-only">Error:</span>
+                                &nbsp;{this.state.registerError}
+                            </div>
+                        }
+                        <DialogActions>
+                            <Button onClick={this.handleRequestClose} color="primary">
+                                Cancel
+                            </Button>
+                            <Button onClick={this.onEnrollClick} color="primary">
+                                Enroll
+                            </Button>
+
+                        </DialogActions>
+                    </Dialog>
                 </Toolbar>
             </div>
         )

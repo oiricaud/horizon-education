@@ -1,6 +1,6 @@
 import {firebaseAuth, ref} from '../config/constants'
 
-export function auth(student) {
+export function add(student) {
     ref.push({
         name: student.name,
         email: student.email,
@@ -27,7 +27,6 @@ export function saveUser(user) {
         .set({
             email: user.email,
             uid: user.uid,
-
         })
         .then(() => user)
 

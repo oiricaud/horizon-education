@@ -5,13 +5,13 @@ import {withStyles} from 'material-ui/styles';
 import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-import {Avatar} from "../../node_modules/material-ui/index";
-import classNames from 'classnames';
-
+import Directions from "../views/directions"
 // using CommonJS modules
 const styles = theme => ({
     root: {
         backgroundColor: '#e6ecf0',
+        flexGrow: 1,
+        marginTop: 30,
     },
     banner:{
         height: 350,
@@ -19,10 +19,10 @@ const styles = theme => ({
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
-        marginTop: theme.spacing.unit * 3,
-        marginBottom: theme.spacing.unit * 3,
-        marginLeft: theme.spacing.unit * 3,
-        marginRight: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 2,
+        marginLeft: theme.spacing.unit * 2,
+        marginRight: theme.spacing.unit * 2,
     }),
     avatar: {
         display: 'block',
@@ -33,6 +33,11 @@ const styles = theme => ({
         width: 150,
         height: 150,
     },
+    header: {
+        fontWeight: 300,
+        marginTop: 20,
+        fontSize: 30,
+    }
 });
 
 class Home extends Component {
@@ -47,7 +52,7 @@ class Home extends Component {
                         title="Mountains banner"
                     />
                     <div>
-                        <h1> About </h1>
+                        <Typography type="title" className={classes.header}> About </Typography>
                     </div>
                     <h4> History</h4>
                     <Typography type="body1" component="p">
@@ -97,13 +102,9 @@ class Home extends Component {
                         program(s). That was the beginning of a strong, and dependable organization, started from the
                         community for the community.
                     </Typography>
-
-                    <Avatar
-                        alt="Adelle Charles"
-                        src={process.env.PUBLIC_URL + './faculty/default.jpg'}
-                        className={classNames(classes.avatar, classes.bigAvatar)}
-                    />
                 </Paper>
+                <Directions>
+                </Directions>
             </div>
         );
     }

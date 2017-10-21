@@ -14,7 +14,7 @@ import {
 } from "../../node_modules/material-ui/Dialog/index";
 import LearnMore from '../components/learn-more.jsx';
 import Card from "../../node_modules/material-ui/Card/Card";
-import {auth} from '../helpers/auth'
+import {add} from '../helpers/auth'
 
 let MediaReact = require('react-media');
 const styles = theme => ({
@@ -78,9 +78,9 @@ class Careers extends React.Component {
     };
     onEnrollClick = (e) => {
         e.preventDefault();
-        auth(this.state.person);
         console.log("when clicking, the form data is:");
         console.log(this.state.person);
+        add(this.state.person);
         this.setState({open: false});
     };
 
