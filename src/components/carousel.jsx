@@ -28,7 +28,8 @@ const styles = theme => ({
     },
     paper: theme.mixins.gutters({
         paddingTop: 8,
-        paddingBottom: 8,
+        paddingBottom: 16,
+        marginTop: theme.spacing.unit * 3,
         marginLeft: theme.spacing.unit * 2,
         marginRight: theme.spacing.unit * 2,
     }),
@@ -90,9 +91,7 @@ class Carousel extends React.Component {
     };
 
     render() {
-
         const {classes, theme} = this.props;
-
         return (
             <div>
                 <MediaReact query="(max-width: 599px)">

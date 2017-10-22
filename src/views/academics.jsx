@@ -24,10 +24,10 @@ const styles = theme => ({
     paper: theme.mixins.gutters({
         paddingTop: 8,
         paddingBottom: 16,
-        marginTop: theme.spacing.unit * 3,
-        marginBottom: theme.spacing.unit * 3,
-        marginLeft: theme.spacing.unit * 3,
-        marginRight: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 2,
+        marginLeft: theme.spacing.unit * 2,
+        marginRight: theme.spacing.unit * 2,
     }),
     gridList: {
         width: 1150,
