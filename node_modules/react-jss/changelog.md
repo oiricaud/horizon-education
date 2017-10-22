@@ -1,3 +1,7 @@
+## 7.2.0 / 2017-09-23
+
+- Add `generateClassName` prop to `JssProvider` in order to support multi-tree apps.
+
 ## 7.1.0 / 2017-08-16
 
 - Added custom `theming` option

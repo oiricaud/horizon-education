@@ -6,6 +6,8 @@ import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import Directions from "../views/directions"
+import Carousel from "../components/carousel"
+
 // using CommonJS modules
 const styles = theme => ({
     root: {
@@ -103,6 +105,8 @@ class Home extends Component {
                         community for the community.
                     </Typography>
                 </Paper>
+                <Carousel>
+                </Carousel>
                 <Directions>
                 </Directions>
             </div>

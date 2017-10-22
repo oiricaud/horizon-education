@@ -84,6 +84,7 @@ class Directions extends Component {
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
                                 </div>
+
                                 <div  className={classes.hoursSmall}>
                                     <Gmaps
                                         width={'100%'}
@@ -119,6 +120,7 @@ class Directions extends Component {
                             <Paper className={classes.paperLarge} elevation={10}>
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
+                                    <p> Main Campus 14476 N. Horizon Blvd Suite H</p>
                                 </div>
                                 <div  className={classes.hoursLarge}>
                                     <Gmaps

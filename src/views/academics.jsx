@@ -90,10 +90,7 @@ class Academics extends Component {
                         image={process.env.PUBLIC_URL + 'banner/academics.jpg'}
                         title="Mountains banner"
                     />
-                    <div>
-                        <h1> Academics </h1>
-                    </div>
-                    <h4> Main Campus 14476 N. Horizon Blvd Suite H</h4>
+                    <h1> Academics </h1>
                     <Typography type="body1" component="p">
                         Horizon Education is from the community, for the community. Horizon Education is on a mission to
                         provide high quality education to help students actively seeking education to increase, improve,

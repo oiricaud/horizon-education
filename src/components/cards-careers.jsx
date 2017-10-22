@@ -23,13 +23,12 @@ const styles = theme => ({
         width: '100%',
     },
     paper: {
-        padding: 16,
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
     textField: {
-        marginLeft: theme.spacing.unit  * 3,
-        marginRight: theme.spacing.unit  * 3,
+        marginLeft: theme.spacing.unit * 2,
+        marginRight: theme.spacing.unit * 2,
         maxWidth: 250,
     },
     media: {
@@ -41,11 +40,9 @@ const styles = theme => ({
     cards:{
         marginTop: 30,
         marginBottom: 40,
-        marginLeft: 5,
-        marginRight: 5,
     },
     content: {
-        maxHeight: 120,
+        maxHeight: 150,
     },
 });
 
@@ -124,7 +121,7 @@ class Careers extends React.Component {
                             )}
                     </MediaReact>
                         <CardActions>
-                            <Button dense color="primary" onClick={this.handleClickOpen}>
+                            <Button raised color="accent" onClick={this.handleClickOpen}>
                                 Enroll
                             </Button>
                             <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>

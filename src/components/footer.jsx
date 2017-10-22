@@ -26,9 +26,7 @@ function Footer(props) {
         backgroundColor: "#24292e",
         borderTop: "1px solid #E7E7E7",
         textAlign: "center",
-        position: "fixed",
         left: "0",
-        bottom: "0",
         height: 'auto',
         width: "100%",
         fontFamily: 'Open Sans, sans-serif',
@@ -36,17 +34,12 @@ function Footer(props) {
 
     };
 
-    var phantom = {
-        display: 'block',
-        height: '30px',
-        width: '100%',
-    };
+
     return (
         <div>
-            <div style={phantom} />
             <div style={style}>
                 <div className={classes.root}>
-                    <p> Please call us at <a href="tel:915-201-1401" style={{color: '#55b8ff'}}> 915-201-1401 </a> or
+                    <p> phone: <a href="tel:915-201-1401" style={{color: '#55b8ff'}}> 915-201-1401 </a> or
                         <a href="tel:915-201-1402" style={{color: '#55b8ff'}}> 915-201-1402 </a>
                     </p>
                 </div>
@@ -55,7 +48,7 @@ function Footer(props) {
                     </p>
                 </div>
                 <div className={classes.root}>
-                    <p> Fax: <a href="tel:915-231-6034" style={{color: '#55b8ff'}}> 915-231-6034 </a></p>
+                    <p> fax: <a href="tel:915-231-6034" style={{color: '#55b8ff'}}> 915-231-6034 </a></p>
                 </div>
             </div>
         </div>

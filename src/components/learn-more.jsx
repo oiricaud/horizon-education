@@ -62,7 +62,8 @@ class LearnMore extends React.Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <Button dense color="primary" onClick={this.handleClickOpen}>Learn More</Button>
+                <Button dense color="primary" style={{color: '#2196f3'}} onClick={this.handleClickOpen}>Learn
+                    More</Button>
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.open}>
                     <DialogTitle>{this.props.title} </DialogTitle>
                     <div>

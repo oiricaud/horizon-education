@@ -282,6 +282,29 @@ You can also access the Jss instance being used by default.
 import {jss} from 'react-jss'
 ```
 
+### Multi-tree setup
+
+In case you render multiple react rendering trees in one application, you will get class name collisions, because every JssProvider rerender will reset the class names generator. If you want to avoid this, you can share the class names generator between multiple JssProvider instances.
+
+__Note__: in case of SSR, make sure to create a new generator for __each__ request. Otherwise class names will become indeterministic and at some point you may run out of max safe integer numbers.
+
+```javascript
+import {createGenerateClassName, JssProvider} from 'react-jss'
+
+const generateClassName = createGenerateClassName()
+
+const Component = () => (
+  <div>
+    <JssProvider generateClassName={generateClassName}>
+      <App1 />
+    </JssProvider>
+    <JssProvider generateClassName={generateClassName}>
+      <App2 />
+    </JssProvider>
+  </div>
+)
+```
+
 ### Decorators
 
 _Beware that [decorators are stage-2 proposal](https://tc39.github.io/proposal-decorators/), so there are [no guarantees that decorators will make its way into language specification](https://tc39.github.io/process-document/). Do not use it in production. Use it at your own risk and only if you know what you are doing._
