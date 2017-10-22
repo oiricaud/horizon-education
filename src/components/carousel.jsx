@@ -46,7 +46,6 @@ const styles = theme => ({
         alignItems: 'center',
         height: 50,
         marginBottom: 20,
-        background: theme.palette.background.default,
     },
 });
 let careers = [
@@ -201,57 +200,49 @@ class Carousel extends React.Component {
                                         <Grid container spacing={40}>
                                             <Grid item xs={12} sm={6}>
                                                 <CareerCards
-                                                    title={'Network Administrator (IT)'}
-                                                    image={process.env.PUBLIC_URL + './students/network-admin.jpg'}
-                                                    info={'The Information Technology Diploma in the Network Administration Program, is awarded to students who are prepared for an entry level employment in the technology field. The Network Administrator Program prepares students to maintain, troubleshoot, setup a network, also it provides the skills and knowledge needed to manage a small network upon the completion of the program.\n' +
-                                                    'A combination of having A+, and Net+ Certifications upon graduation, also some of the Hands on skills that the program provides to graduates are Help Desk Technician, Network Administration, Technical Support, and Field Support Technician, increase the marketability of the students, and may increase the hire possibility.'}
+                                                    title={careers[this.state.activeStep]}
+                                                    image={careersImages[this.state.activeStep]}
+                                                    info={careersInfo[this.state.activeStep]}
                                                 >
                                                 </CareerCards>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
                                                 <CareerCards
-                                                    title={'Medical Billing & Office Procedures'}
-                                                    image={process.env.PUBLIC_URL + './students/medical-bill.jpg'}
-                                                    info={'The students in the Medical Billing and Office Procedures Diploma Program will learn the procedural knowledge Medical Billing and coding. Paying attention to details when filling insurance forms, and dealing with related tasks associated with special Medical coding for a doctor’s offices and Hospitals. As a Medical Billing and Office Procedures student, learning the professional administrative health functions becomes a main skill in the medical field of Medical Billing and Office Procedures. Graduates may found jobs at the hospitals, insurance companies, home healthcare and clinics. Medical Billing and Office Procedures clerk, may work in the administration at the front office, or may help with any clinical laboratory dealing with patients.'}
+                                                    title={careers[this.state.activeStep + 1]}
+                                                    image={careersImages[this.state.activeStep + 1]}
+                                                    info={careersInfo[this.state.activeStep + 1]}
                                                 >
                                                 </CareerCards>
                                             </Grid>
                                         </Grid>
 
                                         <Grid container spacing={40}>
-                                            <Grid item xs={12} sm={6}>
-                                                <CareerCards
-                                                    title={'Medical Assistant'}
-                                                    image={process.env.PUBLIC_URL + './students/medical-assistant.jpg'}
-                                                    info={'Students that complete the Medical Assisting Diploma Program may have better understanding of both the Medical Office terminology, record keeping, and clinical laboratory environment and procedures. The skills provided by the program may help the students with Phlebotomy technician skills procedures, EKG procedures. The employment opportunity maybe available in Doctors’ offices, Hospitals and Clinics.'}
-                                                >
-                                                </CareerCards>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <CareerCards
-                                                    title={'Paralegal'}
-                                                    image={process.env.PUBLIC_URL + './students/paralegal.jpg'}
-                                                    info={'This is a certification program that prepares the certified paralegal associates to have an overview of the legal system, and a better understanding of the court system. Working with lawyers and private law firms for the public sectors.'}
-                                                >
-                                                </CareerCards>
-                                            </Grid>
-                                        </Grid>
-                                        <Grid container spacing={40}>
-                                            <Grid item xs={12} sm={6}>
-                                                <CareerCards
-                                                    title={'IT A+'}
-                                                    image={process.env.PUBLIC_URL + './students/programmer.jpg'}
-                                                    info={'The A+ certification is designed to prepare students for entry level employment in the IT field. The A+ certification prepares students with the skills and knowledge needed to set-up, maintain, troubleshoot, and repair computers and small computer networks. Graduates will leave the program with the hands-on experience, customer service skills, and A+ certifications expected by today’s employers. The A+ prepares graduates for positions such Help Desk Analyst, Customer Support Representative, Technical Support Specialist, and Field Service Technician.'}
-                                                >
-                                                </CareerCards>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <CareerCards
-                                                    title={'Phlebotomy'}
-                                                    image={process.env.PUBLIC_URL + './students/phelebotomy.jpg'}
-                                                    info={'course prepares the students to work with variety of devices to accomplish many tasks of blood collection process and procedures. Working with the anatomy and physiology of human cardiovascular system, prepares the students to address the legal and ethical issues associated with Phlebotomist. Learning all about the infection prevention, and prepare labeling, for accessioning of specimens and quality assurance. Some of the skills that the students accomplish along the course are working with vacuum collection devices, butterfly needles, also blood cultures specimen collection on adults and children, and infants.'}
-                                                >
-                                                </CareerCards>
+                                            <Grid item xs={12}>
+                                                <Card className={classes.card}>
+                                                    <MobileStepper
+                                                        type="dots"
+                                                        steps={4}
+                                                        position="static"
+                                                        activeStep={this.state.activeStep}
+                                                        className={classes.mobileStepper}
+                                                        nextButton={
+                                                            <Button dense onClick={this.handleNext}
+                                                                    disabled={this.state.activeStep === 5}>
+                                                                Next
+                                                                {theme.direction === 'rtl' ? <KeyboardArrowLeft/> :
+                                                                    <KeyboardArrowRight/>}
+                                                            </Button>
+                                                        }
+                                                        backButton={
+                                                            <Button dense onClick={this.handleBack}
+                                                                    disabled={this.state.activeStep === 0}>
+                                                                {theme.direction === 'rtl' ? <KeyboardArrowRight/> :
+                                                                    <KeyboardArrowLeft/>}
+                                                                Back
+                                                            </Button>
+                                                        }
+                                                    />
+                                                </Card>
                                             </Grid>
                                         </Grid>
                                     </div>

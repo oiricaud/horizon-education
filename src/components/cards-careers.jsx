@@ -6,6 +6,8 @@ import Dialog from 'material-ui/Dialog';
 import Typography from 'material-ui/Typography';
 import TextField from "../../node_modules/material-ui/TextField/TextField";
 import {CardActions, CardContent, CardMedia} from "../../node_modules/material-ui/Card/index";
+import Slide from 'material-ui/transitions/Slide';
+
 import {
     DialogActions,
     DialogContent,
@@ -22,35 +24,22 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 3,
         width: '100%',
     },
-    paper: {
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
+    card: {
+        maxWidth: 'auto',
     },
     textField: {
-        marginLeft: theme.spacing.unit * 2,
-        marginRight: theme.spacing.unit * 2,
-        maxWidth: 250,
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+        width: 200,
     },
     media: {
         height: 200,
-    },
-    card: {
-        maxWidth: 550,
-    },
-    cards:{
-        marginTop: 30,
-        marginBottom: 40,
     },
     content: {
         maxHeight: 150,
     },
 });
 
-function setErrorMsg(error) {
-    return {
-        registerError: error.message
-    }
-}
 class Careers extends React.Component {
     state = {
         open: false,
@@ -124,78 +113,68 @@ class Careers extends React.Component {
                             <Button raised color="accent" onClick={this.handleClickOpen}>
                                 Enroll
                             </Button>
-                            <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
+                            <Dialog open={this.state.open}
+                                    transition={<Slide direction="up"/>}
+                                    onRequestClose={this.handleRequestClose}>
                                 <DialogTitle>{'Enroll'}</DialogTitle>
                                 <DialogContent>
                                     <DialogContentText>
                                         To subscribe to our newsletter, please enter your information here. We will send
                                         updates occasionally.
                                     </DialogContentText>
+                                </DialogContent>
                                     <TextField
-                                        value={this.state.name}
+                                        defaultValue={this.state.name}
                                         onChange={this.handleChange}
                                         autoFocus
-                                        margin="dense"
+                                        className={classes.textField}
+                                        margin="normal"
                                         id="name"
                                         label="First Last Name"
-                                        type="name"
                                         name="name"
                                         fullWidth
                                     />
                                     <TextField
-                                        value={this.state.email}
+                                        defaultValue={this.state.email}
                                         onChange={this.handleChange}
-                                        autoFocus
-                                        margin="dense"
+                                        className={classes.textField}
+                                        margin="normal"
                                         id="email"
                                         label="Email"
-                                        type="email"
                                         name="email"
                                         fullWidth
                                     />
                                     <TextField
-                                        value={this.state.address}
+                                        defaultValue={this.state.address}
                                         onChange={this.handleChange}
-                                        autoFocus
-                                        margin="dense"
+                                        className={classes.textField}
+                                        margin="normal"
                                         id="address"
                                         label="Address"
-                                        type="address"
                                         name="address"
                                         fullWidth
                                     />
                                     <TextField
-                                        value={this.state.city}
+                                        defaultValue={this.state.city}
                                         onChange={this.handleChange}
-                                        autoFocus
-                                        margin="dense"
+                                        className={classes.textField}
+                                        margin="normal"
                                         id="city"
                                         label="City, State, Zip"
-                                        type="city"
                                         name="city"
                                         fullWidth
                                     />
                                     <TextField
-                                        value={this.state.phoneNumber}
+                                        defaultValue={this.state.phoneNumber}
                                         onChange={this.handleChange}
-                                        autoFocus
-                                        margin="dense"
+                                        className={classes.textField}
+                                        margin="normal"
                                         id="phonenumber"
                                         label="Phone Number"
-                                        type="phone"
                                         name="phoneNumber"
                                         fullWidth
                                     />
-                                </DialogContent>
-                                {
-                                    this.state.registerError &&
-                                    <div className="alert alert-danger" role="alert">
-                                        <span className="glyphicon glyphicon-exclamation-sign"
-                                              aria-hidden="true"></span>
-                                        <span className="sr-only">Error:</span>
-                                        &nbsp;{this.state.registerError}
-                                    </div>
-                                }
+
                                 <DialogActions>
                                     <Button onClick={this.handleRequestClose} color="primary">
                                         Cancel

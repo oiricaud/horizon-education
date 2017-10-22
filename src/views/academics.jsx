@@ -17,7 +17,6 @@ const styles = theme => ({
         flexWrap: 'wrap',
         justifyContent: 'center',
         overflow: 'hidden',
-        background: theme.palette.background.paper,
     },
     banner: {
         height: 350,

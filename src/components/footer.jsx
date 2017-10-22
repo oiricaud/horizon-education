@@ -39,16 +39,16 @@ function Footer(props) {
         <div>
             <div style={style}>
                 <div className={classes.root}>
-                    <p> phone: <a href="tel:915-201-1401" style={{color: '#55b8ff'}}> 915-201-1401 </a> or
+                    <p> Email: <a href="services@horizoneducation.edu" style={{color: '#ff4081'}}>services@horizoneducation.edu</a>
+                    </p>
+                </div>
+                <div className={classes.root}>
+                    <p> Tel: <a href="tel:915-201-1401" style={{color: '#55b8ff'}}> 915-201-1401 </a> or
                         <a href="tel:915-201-1402" style={{color: '#55b8ff'}}> 915-201-1402 </a>
                     </p>
                 </div>
                 <div className={classes.root}>
-                    <p> email: <a href="services@horizoneducation.edu" style={{color: '#ff4081'}}>services@horizoneducation.edu</a>
-                    </p>
-                </div>
-                <div className={classes.root}>
-                    <p> fax: <a href="tel:915-231-6034" style={{color: '#55b8ff'}}> 915-231-6034 </a></p>
+                    <p> Fax: <a href="tel:915-231-6034" style={{color: '#55b8ff'}}> 915-231-6034 </a></p>
                 </div>
             </div>
         </div>
