@@ -32,6 +32,7 @@ const styles = theme => ({
     },
     mobileBanner: {
         height: 250,
+        backgroundPosition: 'left',
     },
     paper: theme.mixins.gutters({
         paddingTop: 16,
@@ -188,23 +189,20 @@ class Home extends Component {
                         <div>
                             <Paper className={classes.paper} elevation={10}>
                                 <CardMedia
-                                    className={classes.mobileBanner}
+                                    className={classes.banner}
                                     image={process.env.PUBLIC_URL + 'banner/education.jpg'}
                                     title="Mountains banner"
                                 />
                                 <div>
                                     <Typography type="title" className={classes.header}> About </Typography>
                                 </div>
-                                <CardContent>
-                                    <Typography component="p">
-                                        {information[0]}
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <Typography component="p">
-                                        {information[1]}
-                                    </Typography>
-                                </CardContent>
+                                <Typography type="body1" component="p">
+                                    {information[0]}
+                                </Typography>
+                                &nbsp;
+                                <Typography type="body1" component="p">
+                                    {information[1]}
+                                </Typography>
                                 <CardActions disableActionSpacing>
                                     <IconButton aria-label="Add to favorites">
                                         <FavoriteIcon/>
