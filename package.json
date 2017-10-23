@@ -1,9 +1,10 @@
 {
   "name": "horizoneducation",
+  "homepage": "https://horizon-education.netlify.com/",
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "babel-preset-env now:": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "classnames": "^2.2.5",
     "express": "^4.15.4",
     "firebase": "^4.5.0",
@@ -11,6 +12,7 @@
     "google-map-react": "^0.24.0",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.5",
+    "now": "^8.3.10",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-doc-meta": "^0.2.0",
