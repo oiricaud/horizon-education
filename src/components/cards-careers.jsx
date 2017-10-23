@@ -34,6 +34,7 @@ const styles = theme => ({
     },
     media: {
         height: 200,
+        backgroundPosition: 'top',
     },
     content: {
         maxHeight: 150,
