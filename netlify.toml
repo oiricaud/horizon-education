@@ -4,7 +4,7 @@
 # “command” is your build command.
 
 [build]
-  base    = "site"
+  base    = "https://horizon-education.netlify.com"
   publish = "public"
   command = "make"
 
