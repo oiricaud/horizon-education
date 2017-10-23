@@ -6,7 +6,7 @@
 [build]
   base    = ""
   publish = "public"
-  command = "npm run-script build"
+  command = "npm run deploy"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
