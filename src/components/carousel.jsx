@@ -101,7 +101,6 @@ class Carousel extends React.Component {
                                 <div>
                                     <Typography type="title" className={classes.header}> Academics </Typography>
                                 </div>
-                                <h5> Main Campus 14476 N. Horizon Blvd Suite H</h5>
                                 <Typography type="body1" component="p">
                                     Horizon Education is from the community, for the community. Horizon Education is on
                                     a mission to
@@ -199,17 +198,17 @@ class Carousel extends React.Component {
                                         <Grid container spacing={40}>
                                             <Grid item xs={12} sm={6}>
                                                 <CareerCards
-                                                    title={careers[this.state.activeStep]}
-                                                    image={careersImages[this.state.activeStep]}
-                                                    info={careersInfo[this.state.activeStep]}
+                                                    title={careers[(2 * this.state.activeStep)]}
+                                                    image={careersImages[(2 * this.state.activeStep)]}
+                                                    info={careersInfo[(2 * this.state.activeStep)]}
                                                 >
                                                 </CareerCards>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
                                                 <CareerCards
-                                                    title={careers[this.state.activeStep + 1]}
-                                                    image={careersImages[this.state.activeStep + 1]}
-                                                    info={careersInfo[this.state.activeStep + 1]}
+                                                    title={careers[(2 * this.state.activeStep) + 1]}
+                                                    image={careersImages[(2 * this.state.activeStep) + 1]}
+                                                    info={careersInfo[(2 * this.state.activeStep) + 1]}
                                                 >
                                                 </CareerCards>
                                             </Grid>
@@ -220,13 +219,13 @@ class Carousel extends React.Component {
                                                 <Card className={classes.card}>
                                                     <MobileStepper
                                                         type="dots"
-                                                        steps={4}
+                                                        steps={3}
                                                         position="static"
                                                         activeStep={this.state.activeStep}
                                                         className={classes.mobileStepper}
                                                         nextButton={
                                                             <Button dense onClick={this.handleNext}
-                                                                    disabled={this.state.activeStep === 5}>
+                                                                    disabled={this.state.activeStep === 2}>
                                                                 Next
                                                                 {theme.direction === 'rtl' ? <KeyboardArrowLeft/> :
                                                                     <KeyboardArrowRight/>}

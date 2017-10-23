@@ -34,7 +34,7 @@ const styles = theme => ({
         height: 250,
     },
     paper: theme.mixins.gutters({
-        paddingTop: 8,
+        paddingTop: 16,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 3,
@@ -50,6 +50,10 @@ const styles = theme => ({
         fontWeight: 300,
         marginTop: 20,
         fontSize: 30,
+        display: 'flex',
+        alignItems: 'center',
+        height: 50,
+        marginBottom: 20,
     },
     card: {
         marginTop: theme.spacing.unit * 2,
@@ -131,12 +135,12 @@ class Home extends Component {
                                     image={process.env.PUBLIC_URL + 'banner/education.jpg'}
                                     title="Mountains banner"
                                 />
-                                <CardContent>
+                                <div>
                                     <Typography type="title" className={classes.header}> About </Typography>
-                                    <Typography component="p">
-                                        {information[0]}
-                                    </Typography>
-                                </CardContent>
+                                </div>
+                                <Typography type="body1" component="p">
+                                    {information[0]}
+                                </Typography>
                                 <CardActions disableActionSpacing>
                                     <IconButton aria-label="Add to favorites">
                                         <FavoriteIcon/>
