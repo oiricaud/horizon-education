@@ -4,9 +4,9 @@
 # “command” is your build command.
 
 [build]
-  base    = "https://horizon-education.netlify.com"
+  base    = "site"
   publish = "public"
-  command = "make"
+  command = "npm run-script build"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
