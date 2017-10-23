@@ -11,7 +11,7 @@
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
 [context.production]
-  command = "make production"
+  command = "npm run-script build"
   [context.production.environment]
     ACCESS_TOKEN = "super secret"
 
