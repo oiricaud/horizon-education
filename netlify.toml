@@ -4,14 +4,14 @@
 # “command” is your build command.
 
 [build]
-  base    = ""
+  base    = "site"
   publish = "public"
-  command = "npm run deploy"
+  command = "npm"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
 [context.production]
-  command = "npm run-script build"
+  command = "npm production"
   [context.production.environment]
     ACCESS_TOKEN = "super secret"
 
