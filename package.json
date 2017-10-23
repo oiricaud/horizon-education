@@ -1,7 +1,7 @@
 {
   "name": "horizoneducation",
   "homepage": "https://horizon-education.netlify.com/",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "babel-preset-env": "^1.6.1",
