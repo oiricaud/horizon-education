@@ -133,7 +133,7 @@ class Home extends Component {
                             <Paper className={classes.paper} elevation={10}>
                                 <CardMedia
                                     className={classes.mobileBanner}
-                                    image={process.env.PUBLIC_URL + 'banner/education.png'}
+                                    image={process.env.PUBLIC_URL + 'banner/education.jpg'}
                                     title="Mountains banner"
                                 />
                                 <div>
@@ -190,7 +190,7 @@ class Home extends Component {
                             <Paper className={classes.paper} elevation={10}>
                                 <CardMedia
                                     className={classes.banner}
-                                    image={process.env.PUBLIC_URL + 'banner/education.png'}
+                                    image={process.env.PUBLIC_URL + 'banner/education.jpg'}
                                     title="Mountains banner"
                                 />
                                 <div>

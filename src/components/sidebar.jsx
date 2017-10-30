@@ -9,8 +9,6 @@ import Divider from 'material-ui/Divider';
 import PhoneIcon from 'material-ui-icons/Phone';
 import AcademicsIcon from 'material-ui-icons/ModeEdit';
 import DirectionsIcon from 'material-ui-icons/Directions';
-import StarIcon from 'material-ui-icons/Star';
-import PersonIcon from 'material-ui-icons/Person';
 import FaqIcon from 'material-ui-icons/QuestionAnswer';
 import HomeIcon from 'material-ui-icons/Home';
 import ComputerIcon from 'material-ui-icons/Computer';
@@ -20,6 +18,7 @@ import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import {Button, Dialog} from "../../node_modules/material-ui/index";
 import {add} from '../helpers/auth'
+
 
 import {
     DialogActions,
@@ -181,6 +180,7 @@ class SideBarItem extends Component {
                     </ListItem>
                 </NavLink>
 
+                {/*
                 <NavLink activeClassName='active' exact to='faculty'>
                     <ListItem button>
                         <ListItemIcon>
@@ -191,6 +191,7 @@ class SideBarItem extends Component {
                         </div>
                     </ListItem>
                 </NavLink>
+                */}
 
                 <NavLink activeClassName='active' exact to='faq'>
                     <ListItem button>
@@ -199,17 +200,6 @@ class SideBarItem extends Component {
                         </ListItemIcon>
                         <div className={classes.sidebar}>
                             FAQ
-                        </div>
-                    </ListItem>
-                </NavLink>
-
-                <NavLink activeClassName='active' exact to='mission'>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <StarIcon />
-                        </ListItemIcon>
-                        <div className={classes.sidebar}>
-                            Mission
                         </div>
                     </ListItem>
                 </NavLink>
@@ -253,6 +243,9 @@ class SideBarItem extends Component {
                     <Typography type="title" className={classes.flex}>
                         Horizon Education
                     </Typography>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M2.001 9.352c0 1.873.849 2.943 1.683 3.943.031"/>
+                    </svg>
                     <Button color="contrast" onClick={this.handleClickOpen}>Apply</Button>
                     <Dialog open={this.state.openButton} onRequestClose={this.handleRequestClose}>
                         <DialogTitle>{'Enroll'}</DialogTitle>

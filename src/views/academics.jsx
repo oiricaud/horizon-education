@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import 'typeface-roboto'
 import {withStyles} from 'material-ui/styles';
-import {CardMedia} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import CareerCards from '../components/cards-careers.jsx';
 import {Grid} from "../../node_modules/material-ui/index";
-import {GridList, GridListTile} from "../../node_modules/material-ui/GridList/index";
 
 // using CommonJS modules
 let MediaReact = require('react-media');
@@ -84,11 +82,6 @@ class Academics extends Component {
         return (
             <div>
                 <Paper className={classes.paper} elevation={10}>
-                    <CardMedia
-                        className={classes.banner}
-                        image={process.env.PUBLIC_URL + 'banner/academics.jpg'}
-                        title="Mountains banner"
-                    />
                     <h1> Academics </h1>
                     <Typography type="body1" component="p">
                         Horizon Education is from the community, for the community. Horizon Education is on a mission to
@@ -165,50 +158,6 @@ class Academics extends Component {
                                 </Grid>
                             </Grid>
                         </div>
-
-                        <MediaReact query="(max-width: 599px)">
-                            {matches => matches ? (
-                                <div className={classes.root}>
-                                    <GridList cellHeight={200} className={classes.gridList} cols={1}>
-                                        {this.horizonEducationTile.map(tile => (
-                                            <GridListTile key={tile.img} cols={tile.cols || 1}>
-                                                <img src={tile.img} alt={tile.title}/>
-                                            </GridListTile>
-                                        ))}
-                                    </GridList>
-                                </div>
-                            ) : (
-                                <div className={classes.root}>
-                                    <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                                        {this.studentTile.map(tile => (
-                                            <GridListTile key={tile.img} cols={0}>
-                                                <img src={tile.img} alt={tile.title}/>
-                                            </GridListTile>
-                                        ))}
-                                        {this.studentTile.map(tile => (
-                                            <GridListTile key={tile.img} cols={1}>
-                                                <h1 className={classes.quote}>"Horizon Education is from the community,
-                                                    for the community."</h1>
-                                            </GridListTile>
-                                        ))}
-                                    </GridList>
-                                    <GridList cellHeight={500} className={classes.gridList} cols={2}>
-                                        {this.groupStudentTile.map(tile => (
-                                            <GridListTile key={tile.img} cols={tile.cols || 0}>
-                                                <h1 className={classes.quote}>"Committed to helping the community by
-                                                    increasing the employment rate with highly trained professionals
-                                                    will make an improved successful community."</h1>
-                                            </GridListTile>
-                                        ))}
-                                        {this.groupStudentTile.map(tile => (
-                                            <GridListTile key={tile.img} cols={tile.cols || 1}>
-                                                <img src={tile.img} alt={tile.title}/>
-                                            </GridListTile>
-                                        ))}
-                                    </GridList>
-                                </div>
-                            )}
-                        </MediaReact>
                     </div>
                 </Paper>
             </div>

@@ -120,7 +120,7 @@ class Directions extends Component {
                             <Paper className={classes.paperLarge} elevation={10}>
                                 <div>
                                     <Typography type="title" className={classes.header}> Directions </Typography>
-                                    <p> Main Campus 14476 N. Horizon Blvd Suite H</p>
+                                    <p> 1605 George Dieter 100 A El Paso TX 79936</p>
                                 </div>
                                 <div  className={classes.hoursLarge}>
                                     <Gmaps
